@@ -26,6 +26,31 @@
 @keyframes m-follow { from { opacity: 0; transform: translateY(10px); } }
 .m-follow { animation: m-follow var(--dur-slow) var(--ease-out) both; animation-delay: var(--m-d, 0ms); }
 
+/* ── v2 (from /crepes): load choreography primitives ─────────────────────────────────── */
+/* Each is CSS-only (plays without JS, ends visible), timed by --m-d. Reduced motion: final state. */
+@keyframes m-settle { from { transform: scale(1.06); } }            /* hero photo settles into its frame, 1600 ms */
+.m-settle { animation: m-settle var(--dur-settle) var(--ease-out) both; }
+@keyframes m-in { from { opacity: 0; transform: translateY(14px); } }  /* lead, actions, credit */
+.m-in { animation: m-in 700ms var(--ease-out) both; animation-delay: var(--m-d, 0ms); }
+@keyframes m-in-side { from { opacity: 0; transform: translateX(24px); } } /* a board arriving from the edge it is flush to */
+.m-in-side { animation: m-in-side 700ms var(--ease-out) both; animation-delay: var(--m-d, 0ms); }
+@keyframes m-drop { from { transform: translateY(-100%); } }         /* header arriving from above */
+@keyframes m-pill-open { from { clip-path: inset(0 50% round 999px); } to { clip-path: inset(0 0 round 999px); } }
+@keyframes m-letter { from { transform: translateY(118%); } }        /* RiseText cells */
+
+/* ── v2: section choreography with v-stage ─────────────────────────────────────────────
+   Put v-stage on the section; children with .st-rise / .st-in / .st-side / .st-draw move once when it enters.
+   --i on a child staggers it by --st-step (default 80 ms). Default state = final (SSR, no JS, reduced motion). */
+[data-stage="armed"] .st-rise { opacity: 0; transform: translateY(28px); }
+[data-stage="armed"] .st-in { opacity: 0; transform: translateY(14px); }
+[data-stage="armed"] .st-side { opacity: 0; transform: translateX(48px); }
+[data-stage="armed"] .st-draw { transform: scaleX(0); }
+.st-draw { transform-origin: left center; }
+[data-stage="in"] :is(.st-rise, .st-in, .st-side) {
+  transition: opacity 560ms var(--ease-out) calc(var(--st-d, 0ms) + var(--i, 0) * var(--st-step, 80ms)), transform 760ms var(--ease-out) calc(var(--st-d, 0ms) + var(--i, 0) * var(--st-step, 80ms));
+}
+[data-stage="in"] .st-draw { transition: transform 720ms var(--ease-out) calc(var(--st-d, 0ms) + var(--i, 0) * var(--st-step, 80ms)); }
+
 /* ── page transitions (Nuxt <NuxtPage> transition "page") ───────────────────────────── */
 /* Leave is a quick fade (system response), enter settles up 12 px. Out-in, so 160 + 240 ms. */
 .page-leave-active { transition: opacity var(--dur-fast) var(--ease-out); }
@@ -34,6 +59,6 @@
 .page-enter-from { opacity: 0; transform: translateY(12px); }
 
 @media (prefers-reduced-motion: reduce) {
-  .m-rise, .m-follow, .m-lift { animation: none; }
+  .m-rise, .m-follow, .m-lift, .m-settle, .m-in, .m-in-side { animation: none; }
   .page-enter-from { transform: none; }
 }

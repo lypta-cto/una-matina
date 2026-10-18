@@ -8,9 +8,11 @@
 // `label`: a name painted on the panel like a lido signboard (Live Stations: the station's name), so consecutive panels
 // read as different boards, not as the same missing picture. Still aria-hidden: the page text carries the names.
 // Motion: the sun comes up / the sign unrolls once when the panel enters (v-stage / v-unveil); final state by default.
+// Events v2: the label is set in the heavy display cut (Montserrat 700, −0.02em), and `tone="brown"` gives a brown
+// panel with a cream label and an apricot sun (for a panel on a yellow or apricot field).
 const props = withDefaults(defineProps<{
   subject: string
-  tone?: 'apricot' | 'yellow' | 'sage'
+  tone?: 'apricot' | 'yellow' | 'sage' | 'brown'
   ratio?: string
   motif?: 'sun' | 'mark'
   rise?: number
@@ -21,10 +23,12 @@ const vars = computed(() => ({
   apricot: { '--slot-bg': 'var(--accent)', '--slot-sun': 'var(--field)', '--slot-ink': 'var(--ink-deep)', '--slot-alt': 'var(--ground)' },
   yellow: { '--slot-bg': 'var(--field)', '--slot-sun': 'var(--accent)', '--slot-ink': 'var(--ink)', '--slot-alt': 'var(--ground)' },
   sage: { '--slot-bg': 'var(--field-2)', '--slot-sun': 'var(--accent)', '--slot-ink': 'var(--ink-deep)', '--slot-alt': 'var(--ground)' },
+  brown: { '--slot-bg': 'var(--field-dark)', '--slot-sun': 'var(--accent)', '--slot-ink': 'var(--on-field-dark)', '--slot-alt': 'var(--ground)' },
 })[props.tone])
 // the label is as large as the panel allows: 13 % of its width, smaller only if the longest word would not fit in 84 %
+// (0.7 em = one Montserrat 700 capital at −0.02em, see --cap-w)
 const longest = computed(() => Math.max(1, ...props.label.split(/\s+/).map(w => w.length)))
-const labelSize = computed(() => `min(13cqi, calc(84cqi / ${(longest.value * 0.74).toFixed(2)}))`)
+const labelSize = computed(() => `min(13cqi, calc(84cqi / ${(longest.value * 0.7).toFixed(2)}))`)
 </script>
 
 <template>
@@ -67,7 +71,7 @@ const labelSize = computed(() => `min(13cqi, calc(84cqi / ${(longest.value * 0.7
 
 .slot__label {
   position: absolute; left: 8%; right: 8%; top: 8%;
-  font-family: var(--font-text); font-weight: 400; line-height: 0.98; text-transform: uppercase; letter-spacing: 0.02em; color: var(--slot-ink);
+  font-family: var(--font-display); font-weight: 700; line-height: 0.92; text-transform: uppercase; letter-spacing: -0.02em; color: var(--slot-ink);
   overflow-wrap: anywhere; text-wrap: balance;
 }
 .slot__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }

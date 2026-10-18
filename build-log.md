@@ -438,3 +438,10 @@ Source: `review/final-events-verify.md` (all 8 pages "ship"); Luka wants it perf
 - `check:tokens` ok; no console errors (dev and production, /crepes too).
 - Motion frames: `review/motion-frames/r5/<page>/sheet.png`.
 - Clean production build: CLS 0.000 on all 8 pages at 1440 and 390, plus the load sweep above. LCP 28–112 ms locally; the 1.4–1.7 s at 390 on Services / Bloom are lazy images met during the scripted scroll, now that those heroes have no picture.
+
+## Events v2 — shared layer (design-system lead, 2026-10-18)
+System: `events-v2-system.md` (the /crepes language for Events: heavy fitted caps, pills, photo-led heroes on a flat multiply tint with plates, brown board + valance, one signature move per page, per-page briefs).
+- Tokens/CSS: `--display-xl/l/m`, `--track-*`, `--cap-w`, `--space-*`, `--tint-photo(-wide)`, `--dur-rise/settle`, `--ease-roll`, `--spring-turn`; `.display-*`, `.title-board`, `.voice`, `.lead`, `.pill*`, `.pills`, `.tint`, `.plate`, `.on-photo`, `.field-*`, `.sec`; motion `.m-settle/.m-in/.m-in-side`, `[data-stage]` `.st-rise/.st-in/.st-side/.st-draw`. Legacy `sign-*`/`.btn` untouched.
+- New: `RiseText` (authored lines, each fitted to its column → ≤ 2 lines by construction; letter/word/line mask rise on load or view), `Board`, `Odometer` (copy of CrpOdo), `SignFlip` (copy of CrpSignFlip with caption props), `WordmarkRise` (copy of CrpWordmarkRise, self-triggering), `usePinProgress`.
+- Upgraded: `PageHero` (+ `heavy` and `photo` layouts, curtain + `#sheet`; legacy split/type markup unchanged), header (pill nav, over-photo mode via meta `hero: 'photo'`, /crepes arrival choreography), footer (full-width rising horizontal wordmark), `CloseCta` (heavy planks, pill, `field`), `FoundPhoto`/`ConceptImage` (`tint`, text slot, `credit="over"`, `position`, `settle`), `ShootSlot` (700 label, `brown` tone), layout (`.site` overflow-x clip, display sizes frozen at 1440).
+- Checks: /crepes pixel-identical at 1440 (full page diff 0 px); all 9 routes 200; no overflow and no console errors at 320–1920; specimen pages (deleted) passed headings ≤ 2 lines, reduced motion + no-JS final state, curtain verified; check:tokens ok.

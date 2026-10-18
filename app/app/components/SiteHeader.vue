@@ -1,18 +1,25 @@
 <script setup lang="ts">
-// Fascia of the lido: sits on the page field at the top; headroom behaviour (hides on scroll down, returns on scroll up).
-// Background crossfades field → cream once you leave the top. Mobile sheet unrolls top-down like the valance.
+// Fascia of the lido (Events v2, events-v2-system.md §Header). wordmark · one pill of links (centred) · Inquire pill.
+// Two modes, from the layout:
+//   field (default)  sticky on the page field, the valance hangs under it (layouts/default.vue)
+//   over             photo-led heroes (page meta `hero: 'photo'`): fixed over the picture, transparent, cream ink,
+//                    no top valance, like the /crepes nav. Once you leave the top it turns cream in both modes.
+// Headroom: hides on scroll down, returns on scroll up (and whenever focus is inside).
+// First page of a visit (CSS, SSR-safe): the fascia drops from −100 %, the pill opens from its centre, its links
+// follow 80 ms apart (the /crepes nav). Later route changes keep it still. Mobile: "Menu" pill opens a cream sheet.
 import { eventsNav, moreNav } from '~/data/site'
+const props = withDefaults(defineProps<{ over?: boolean, field?: string }>(), { over: false, field: 'yellow' })
 const open = ref(false)
 const hidden = ref(false)
 const scrolled = ref(false)
 const root = ref<HTMLElement>()
 const menuBtn = ref<HTMLButtonElement>()
 const route = useRoute()
-// A4 (curbside / peel): on the first page of a visit the fascia's contents drop in from above (CSS, SSR-safe,
-// so it runs before hydration); later route changes keep the header still.
 const arriving = useState('head-arriving', () => true)
-onMounted(() => { setTimeout(() => { arriving.value = false }, 1400) })
+onMounted(() => { setTimeout(() => { arriving.value = false }, 1600) })
 watch(() => route.fullPath, () => { open.value = false; hidden.value = false })
+// over a photo until you scroll (or open the sheet): cream ink, cream Inquire
+const onPhoto = computed(() => props.over && !scrolled.value && !open.value)
 
 let lastY = 0
 let headH = 80
@@ -35,8 +42,7 @@ function onKey(e: KeyboardEvent) {
   if (inSheet) menuBtn.value?.focus()
 }
 function onDoc(e: PointerEvent) { if (open.value && !root.value?.contains(e.target as Node)) open.value = false }
-// lock the page behind the open sheet (it is a push-down sheet, not a modal: focus stays free).
-// Smooth scroll (plugins/smooth-scroll.ts) scrolls programmatically, so it is paused too; the sheet keeps its own wheel.
+// lock the page behind the open sheet (a push-down sheet, not a modal: focus stays free); Lenis paused too
 const { $lenis } = useNuxtApp()
 watch(open, (v) => {
   document.documentElement.style.overflow = v ? 'hidden' : ''
@@ -67,21 +73,27 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header ref="root" class="head" :class="{ 'is-hidden': hidden, 'is-scrolled': scrolled, 'is-open': open }" @focusin="hidden = false">
-    <div class="wrap head__bar" :class="{ 'is-arriving': arriving }">
+  <header
+    ref="root" class="head"
+    :class="[`head--${props.field}`, { 'head--over': props.over, 'is-photo': onPhoto, 'is-hidden': hidden, 'is-scrolled': scrolled, 'is-open': open, 'is-arriving': arriving }]"
+    @focusin="hidden = false"
+  >
+    <div class="wrap head__bar">
       <NuxtLink to="/" class="head__logo" aria-label="Una Mattina Events & Catering, home"><Wordmark /></NuxtLink>
       <nav class="head__nav" aria-label="Main">
-        <NuxtLink v-for="l in eventsNav" :key="l.to" :to="l.to" class="head__link">{{ l.label }}</NuxtLink>
+        <NuxtLink v-for="(l, i) in eventsNav" :key="l.to" :to="l.to" class="head__link" :style="{ '--i': i }">{{ l.label }}</NuxtLink>
       </nav>
-      <NuxtLink to="/inquire" class="btn btn-ink head__cta">Inquire</NuxtLink>
-      <button ref="menuBtn" type="button" class="head__menu" :aria-expanded="open" aria-controls="mobile-menu" @click="open = !open">{{ open ? 'Close' : 'Menu' }}</button>
+      <div class="head__end">
+        <NuxtLink to="/inquire" class="pill pill--s head__cta" :class="onPhoto ? 'pill--cream' : 'pill--ink'">Inquire</NuxtLink>
+        <button ref="menuBtn" type="button" class="pill pill--s head__menu" :class="onPhoto ? 'pill--ghost' : 'pill--line'" :aria-expanded="open" aria-controls="mobile-menu" @click="open = !open">{{ open ? 'Close' : 'Menu' }}</button>
+      </div>
     </div>
     <Transition name="sheet">
       <div v-show="open" id="mobile-menu" class="sheet" data-lenis-prevent>
         <nav aria-label="Main, mobile" class="sheet__nav">
           <NuxtLink v-for="l in [...eventsNav, ...moreNav]" :key="l.to" :to="l.to" class="sheet__link">{{ l.label }}</NuxtLink>
         </nav>
-        <NuxtLink to="/inquire" class="btn btn-primary sheet__cta">Start an inquiry</NuxtLink>
+        <NuxtLink to="/inquire" class="pill pill--sun pill--on-light sheet__cta">Start an inquiry <span class="pill__arrow" aria-hidden="true">→</span></NuxtLink>
       </div>
     </Transition>
   </header>
@@ -89,39 +101,67 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .head {
+  --nav-pill: var(--accent); --nav-ink: var(--ink-deep);
   position: sticky; top: 0; z-index: 40; background: var(--page-field); color: var(--page-ink);
-  /* the field colour crossfades between pages (and to cream once you leave the top) at the slow tempo, with the page field */
   transition: transform var(--dur-base) var(--ease-out), background-color var(--dur-slow) var(--ease-out), color var(--dur-slow) var(--ease-out);
 }
-.head.is-scrolled, .head.is-open { background: var(--ground); color: var(--ink); }
+/* on the apricot field the pill is cream (an apricot pill would vanish) */
+.head--apricot { --nav-pill: var(--ground); --nav-ink: var(--ink); }
+.head--over { position: fixed; left: 0; right: 0; background: transparent; }
+.head.is-photo { color: var(--on-field-dark); --focus-ring: var(--on-field-dark); --logo-sun: var(--accent); }
+.head.is-photo :focus-visible { outline-color: var(--on-field-dark); }
+.head.is-scrolled, .head.is-open { background: var(--ground); color: var(--ink); --nav-pill: var(--accent); --nav-ink: var(--ink-deep); }
 .head.is-hidden { transform: translateY(-100%); }
-.head__bar.is-arriving { animation: head-drop 900ms var(--ease-out) 120ms both; }
-@keyframes head-drop { from { transform: translateY(-100%); } }
-.head__bar { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 36px); min-height: 56px; padding-block: 6px; }
-@media (min-width: 1100px) { .head__bar { min-height: 76px; } }
+
+.head__bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px; min-height: 56px; padding-block: 6px; }
+@media (min-width: 1100px) { .head__bar { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); min-height: 76px; } }
 /* 44 px tap target around an 18 px wordmark */
-.head__logo { width: clamp(160px, 17vw, 240px); flex: none; color: inherit; padding-block: 13px; }
-.head__nav { display: none; gap: clamp(14px, 1.8vw, 28px); margin-left: auto; }
-.head__link { position: relative; color: inherit; text-decoration: none; font-weight: 500; font-size: 1rem; padding: 10px 0; }
-.head__link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform var(--dur-base) var(--ease-out); }
-.head__link.router-link-active::after { transform: scaleX(1); }
-@media (hover: hover) and (pointer: fine) { .head__link:hover::after { transform: scaleX(1); } }
-.head__cta { display: none; min-height: 46px; }
-.head__menu { margin-left: auto; min-height: 44px; padding: 0 4px; background: none; border: 0; color: inherit; font: 600 1rem var(--font-text); text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 2px; cursor: pointer; }
-/* landscape phones: the sheet scrolls inside itself instead of hiding "Start an inquiry" */
-.sheet {
-  background: var(--ground); color: var(--ink); padding: 8px var(--gutter) 28px; display: grid; gap: 16px;
-  max-height: calc(100dvh - 56px); overflow-y: auto; overscroll-behavior: contain;
+.head__logo { width: clamp(150px, 15vw, 224px); color: inherit; padding-block: 13px; justify-self: start; }
+
+.head__nav { display: none; background: var(--nav-pill); border-radius: 999px; padding: 4px; white-space: nowrap; transition: background-color var(--dur-slow) var(--ease-out); }
+.head__link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 clamp(12px, 1.2vw, 18px); border-radius: 999px;
+  color: var(--nav-ink); font-weight: 600; font-size: 0.9375rem; text-decoration: none; white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), transform 120ms var(--ease-out);
+  touch-action: manipulation; user-select: none; -webkit-user-select: none;
 }
-.sheet__nav { display: grid; gap: 4px; }
-.sheet__link { color: inherit; text-decoration: none; font-size: var(--step-1); font-weight: 500; padding: 14px 0; }
-.sheet-enter-active { transition: clip-path var(--dur-base) var(--ease-out); }
-.sheet-leave-active { transition: clip-path var(--dur-fast) var(--ease-out); }
-.sheet-enter-from, .sheet-leave-to { clip-path: inset(0 0 100% 0); }
+.head__link:active { transform: scale(0.96); }
+.head__link:focus-visible { outline-color: var(--nav-ink); outline-offset: -3px; }
+/* the current page: a brown plank inside the pill */
+.head__link.router-link-active { background: var(--ink); color: var(--ground); }
+.head__link.router-link-active:focus-visible { outline-color: var(--ground); }
+@media (hover: hover) and (pointer: fine) { .head__link:not(.router-link-active):hover { background: var(--ground); color: var(--ink); } }
+.head--apricot:not(.is-scrolled):not(.is-photo) .head__link:not(.router-link-active):hover { background: var(--field); }
+
+.head__end { display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+.head__cta { display: none; }
+.head__menu { padding: 0 18px; font-family: var(--font-text); }
 @media (min-width: 1100px) {
   .head__nav { display: flex; }
   .head__cta { display: inline-flex; }
   .head__menu, .sheet { display: none !important; }
 }
-@media (prefers-reduced-motion: reduce) { .head { transition: none; } .head__bar.is-arriving { animation: none; } }
+
+/* first page of a visit: drop, then the pill opens from its centre and its links come in one by one */
+.head.is-arriving .head__bar { animation: m-drop 900ms var(--ease-out) 300ms both; }
+.head.is-arriving .head__nav { animation: m-pill-open 700ms var(--ease-out) 500ms both; }
+.head.is-arriving .head__link { animation: head-link 420ms var(--ease-out) both; animation-delay: calc(860ms + var(--i) * 80ms); }
+@keyframes head-link { from { opacity: 0; transform: translateY(6px); } }
+
+/* landscape phones: the sheet scrolls inside itself instead of hiding "Start an inquiry" */
+.sheet {
+  background: var(--ground); color: var(--ink); padding: 8px var(--gutter) 28px; display: grid; gap: 20px; justify-items: start;
+  max-height: calc(100dvh - 56px); overflow-y: auto; overscroll-behavior: contain;
+}
+.sheet__nav { display: grid; gap: 0; width: 100%; }
+.sheet__link {
+  color: inherit; text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: var(--track-m);
+  font-size: clamp(1.5rem, 1.1rem + 2vw, 2.25rem); line-height: 1; padding: 12px 0;
+}
+.sheet__link.router-link-active { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; text-decoration-color: var(--accent); }
+.sheet__cta { width: 100%; }
+.sheet-enter-active { transition: clip-path var(--dur-base) var(--ease-out); }
+.sheet-leave-active { transition: clip-path var(--dur-fast) var(--ease-out); }
+.sheet-enter-from, .sheet-leave-to { clip-path: inset(0 0 100% 0); }
+@media (prefers-reduced-motion: reduce) { .head { transition: none; } .head.is-arriving :is(.head__bar, .head__nav, .head__link) { animation: none; } }
 </style>

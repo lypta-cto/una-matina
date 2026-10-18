@@ -132,6 +132,76 @@
   .btn-primary:hover, .btn-outline:hover { color: var(--ground); border-color: var(--ink); }
   .btn-ink:hover { color: var(--on-accent); border-color: var(--accent); }
 }
+/* ═══ Events v2 (events-v2-system.md) ═════════════════════════════════════════════════════════════════════
+   Heavy display, pills, photo tint + plates, field contexts. Derived from /crepes; the legacy sign-* / .btn
+   classes above stay for pages not yet rebuilt. */
+.display-xl, .display-l, .display-m { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; overflow-wrap: break-word; }
+.display-xl { font-size: var(--display-xl); letter-spacing: var(--track-xl); line-height: var(--leading-xl); }
+.display-l { font-size: var(--display-l); letter-spacing: var(--track-l); line-height: var(--leading-l); }
+.display-m { font-size: var(--display-m); letter-spacing: var(--track-m); line-height: 1; }
+/* A name on a board row (station, place, step): 700, sentence case allowed, never smaller than step-1. */
+.title-board { font-weight: 700; font-size: var(--step-2); line-height: 1.1; letter-spacing: -0.01em; }
+/* The spoken line above a heavy word ("Buongiorno,"): Playfair italic, hero only, one per page, never a category label. */
+.voice { font-family: var(--font-accent); font-style: italic; font-weight: 400; font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem); line-height: 1.15; letter-spacing: 0; text-transform: none; }
+.lead { font-size: var(--step-1); line-height: 1.45; max-width: 38ch; }
+@media (min-width: 900px) { .lead--l { font-size: 1.25rem; line-height: 1.4; max-width: 32ch; } }
+
+/* Pills: the half-round ends repeat the half-sun of the mark. One family for every action on Events v2.
+   --sun (apricot) is the primary on cream / photo / brown; --ink on yellow / apricot / cream-deep; --cream on sage;
+   --line is the secondary on any light field; --ghost the secondary on photo and brown.
+   Hover (fine pointer): colours swap at --dur-fast and the arrow nudges 2 px; press: scale(.97). */
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
+  min-height: 52px; padding: 0 26px; border-radius: 999px; border: 2px solid transparent;
+  font: 600 1rem/1 var(--font-text); letter-spacing: 0.005em; text-decoration: none; white-space: nowrap;
+  cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform 120ms var(--ease-out);
+}
+.pill:active { transform: scale(0.97); }
+.pill--s { min-height: 44px; padding: 0 18px; font-size: 0.9375rem; }
+.pill__arrow { display: inline-block; transition: transform var(--dur-base) var(--ease-out); }
+.pill--sun { background: var(--accent); color: var(--ink-deep); border-color: var(--accent); }
+.pill--cream { background: var(--ground); color: var(--ink); border-color: var(--ground); }
+.pill--ink { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+.pill--ghost { background: transparent; color: var(--on-field-dark); border-color: var(--on-field-dark); }
+.pill--line { background: transparent; color: var(--ink-deep); border-color: currentColor; }
+.pill[aria-disabled="true"] { cursor: progress; }
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover .pill__arrow { transform: translate(2px, -2px); }
+  .pill:hover .pill__arrow--down { transform: translateY(3px); }
+  .pill--sun:hover { background: var(--ground); border-color: var(--ground); color: var(--ink); }
+  .pill--cream:hover { background: var(--accent); border-color: var(--accent); color: var(--ink-deep); }
+  .pill--ink:hover { background: var(--accent); border-color: var(--accent); color: var(--ink-deep); }
+  .pill--ghost:hover { background: var(--ground); border-color: var(--ground); color: var(--ink); }
+  .pill--line:hover { background: var(--ink-deep); border-color: var(--ink-deep); color: var(--ground); }
+  /* on cream the apricot pill turns brown (a cream-on-cream swap would vanish) */
+  .on-light .pill--sun:hover, .pill--sun.pill--on-light:hover { background: var(--ink); border-color: var(--ink); color: var(--ground); }
+}
+.pill:focus-visible { outline: 3px solid var(--focus-ring, currentColor); outline-offset: 3px; }
+/* phones: first-screen actions share the row */
+@media (max-width: 599px) { .pills { display: flex; gap: 10px; } .pills > .pill { flex: 1 1 0; min-width: 0; padding: 0 14px; } }
+.pills { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+/* Photo with text over it: a flat brown multiply tint over the whole picture (never a gradient) and a solid brown
+   plate behind every small text. Large text (≥ 24 px, or 19 px bold) needs ≥ 3:1 on the tinted pixels, body text sits
+   on a plate. Measure on the real pixels (98th-percentile brightest under each text box) at 320–1920. */
+.tint { position: absolute; inset: 0; background: var(--field-dark); opacity: var(--tint, var(--tint-photo)); mix-blend-mode: multiply; pointer-events: none; }
+@media (min-width: 900px) { .tint { opacity: var(--tint-wide, var(--tint, var(--tint-photo-wide))); } }
+.plate { background: var(--field-dark); color: var(--on-field-dark); padding: 14px 20px 16px; }
+/* Text context over a photo or the brown field: cream ink, cream focus ring, links and TBC marks follow. */
+.on-photo, .on-dark { color: var(--on-field-dark); --focus-ring: var(--on-field-dark); }
+.on-photo :focus-visible, .on-dark :focus-visible { outline-color: var(--on-field-dark); }
+
+/* Field contexts: one per section. Set background, ink and the focus ring together. */
+.field-cream { background: var(--ground); color: var(--ink); }
+.field-deep { background: var(--surface); color: var(--ink); }
+.field-yellow { background: var(--field); color: var(--ink); }
+.field-apricot { background: var(--accent); color: var(--ink-deep); }
+.field-sage { background: var(--field-2); color: var(--ink-deep); }
+.field-brown { background: var(--field-dark); color: var(--on-field-dark); --focus-ring: var(--on-field-dark); }
+.sec { padding-block: var(--space-section); }
+.sec__head { margin-bottom: var(--space-head); }
+
 /* found-photo captions read as one paragraph, no widows */
 .found__cap { text-wrap: pretty; }
 .link {
