@@ -1,0 +1,39 @@
+/*
+ * Motion vocabulary — Una Mattina "Lido". One family, three verbs, all from tokens:
+ *   rise   — a headline line rises out of its own baseline (overflow-clipped), 560 ms, 70 ms per line.
+ *   unroll — a picture opens top-down like the valance rolling off its rod (clip-path), with a 1.06 → 1 settle.
+ *   paint  — a plank of colour is painted left → right behind a label (scaleX on ::before).
+ * Plus `v-reveal` (block rises 16 px + fades) for the one supporting block a section may move.
+ * Directives live in plugins/reveal.ts (v-lines, v-unveil, v-reveal). Everything here is
+ * transform / opacity / clip-path only, never hides content without JS, and is static under reduced motion.
+ */
+
+/* ── rise: line masks ─────────────────────────────────────────────────────────────── */
+/* A mask line: clips only its bottom edge (a little below the baseline), so the text rises into view. */
+.m-line { display: block; clip-path: inset(-0.6em -0.6em -0.12em -0.6em); }
+.m-line__i { display: block; }
+
+/* CSS-only load version (SSR-safe: runs without JS, never waits for hydration). Used by heroes whose
+   line breaks are authored (Home H1) or whose title rises as one block (PageHero). */
+@keyframes m-rise { from { transform: translateY(118%); } }
+.m-rise { animation: m-rise var(--dur-slow) var(--ease-out) both; animation-delay: calc(var(--m-d, 0ms) + var(--m-n, 0) * var(--stagger)); }
+
+/* A side picture that may be the page's LCP: transform only (never hidden), so it is painted from the first frame. */
+@keyframes m-lift { from { transform: translateY(16px); } }
+.m-lift { animation: m-lift var(--dur-slow) var(--ease-out) both; animation-delay: var(--m-d, 0ms); }
+
+/* Supporting copy that follows a rise: a short lift + fade. */
+@keyframes m-follow { from { opacity: 0; transform: translateY(10px); } }
+.m-follow { animation: m-follow var(--dur-slow) var(--ease-out) both; animation-delay: var(--m-d, 0ms); }
+
+/* ── page transitions (Nuxt <NuxtPage> transition "page") ───────────────────────────── */
+/* Leave is a quick fade (system response), enter settles up 12 px. Out-in, so 160 + 240 ms. */
+.page-leave-active { transition: opacity var(--dur-fast) var(--ease-out); }
+.page-leave-to { opacity: 0; }
+.page-enter-active { transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+.page-enter-from { opacity: 0; transform: translateY(12px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .m-rise, .m-follow, .m-lift { animation: none; }
+  .page-enter-from { transform: none; }
+}

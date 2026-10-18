@@ -1,0 +1,72 @@
+/*
+ * Design tokens — Una Mattina "Lido" (from ../../DESIGN.md). The only place raw values live.
+ */
+:root {
+  /* Colour roles */
+  --ground: #FFF7EA;          /* cream: tent canvas, napkins */
+  --surface: #F8EBD5;         /* cream-deep: one tone step for boards and alternate fields */
+  --ink: #5B3A2E;             /* brown */
+  --ink-muted: #76533F;       /* 6.4:1 on cream */
+  --line: #9A7A65;            /* form fields, menu rows: 3.7:1 on cream */
+  --accent: #F4A878;          /* apricot */
+  --on-accent: #4E2412;      /* logo brown: 6.8:1 on apricot (legible in market sun) */
+  --field: #F6D67A;           /* yellow */
+  --on-field: #5B3A2E;
+  --field-2: #9EAD83;         /* sage: Bloom Cart only, large text */
+  --on-field-2: #4E2412;      /* logo brown, 5.5:1 on sage */
+  --field-dark: #5B3A2E;      /* footer: evening */
+  --on-field-dark: #FFF7EA;
+  --ink-deep: #4E2412;        /* logo brown: text on apricot (6.8:1) and sage fields */
+  --stripe-ground: #FFF7EA;   /* the cream stripe of every awning */
+
+  /* Semantic (status only) */
+  --info: #5B3A2E;
+  --success: #4F6B3A;
+  --warning: #8A5A00;
+  --danger: #A63A22;
+
+  /* Type */
+  --font-display: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --font-text: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --font-mono: var(--font-text);
+  --font-accent: "Playfair Display", Georgia, serif;
+  --font-script: "Mrs Saint Delafield", cursive;
+  --tracking-display: 0.02em;
+  --leading-display: 0.95;
+  --leading-text: 1.6;
+  /* viewport unit that stops growing at the 1440 px content width (Events pages freeze their type there) */
+  --vw: min(1vw, 14.4px);
+  --step--1: 0.875rem;
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --step-1: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --step-2: clamp(1.375rem, 1.1rem + 1.2vw, 2.25rem);
+  --step-3: clamp(1.75rem, 1.3rem + 2vw, 3.25rem);
+  --step-4: clamp(2.5rem, 1.6rem + 4.2vw, 6rem);
+  --step-5: clamp(3.25rem, 1.6rem + 7.4vw, 9rem);
+
+  /* Space & layout */
+  --gutter: clamp(16px, 4vw, 40px);
+  --section: clamp(88px, 11vw, 184px);
+  --measure: 62ch;
+  --max: 1440px;
+  --stripe: 28px;
+
+  /* Shape */
+  --radius-s: 0px;
+  --radius-m: 0px;
+  --radius-l: 0px;
+  --shadow-1: none;
+  --shadow-2: none;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 240ms;
+  --dur-slow: 560ms;
+  /* Line stagger for headline mask reveals, and the one physical spring (a sign dropping onto its hook). */
+  --stagger: 70ms;
+  --ease-spring: linear(0, 0.013 0.6%, 0.05 1.2%, 0.2 2.6%, 0.443 4.3%, 0.926 7.8%, 1.053 9.5%, 1.12 11.3%, 1.137 13%, 1.124 14.9%, 1.034 20.6%, 1.002 24.2%, 0.989 28.6%, 0.999 38%, 1);
+}
+@media (min-width: 768px) { :root { --stripe: 44px; } }
+@media (min-width: 1200px) { :root { --stripe: 56px; } }

@@ -1,0 +1,27 @@
+{
+  "name": "site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "check:tokens": "node scripts/check-tokens.mjs",
+    "prebuild": "node scripts/check-tokens.mjs",
+    "pregenerate": "node scripts/check-tokens.mjs",
+    "enable:i18n": "node scripts/enable-i18n.mjs",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^1.0.1",
+    "@nuxt/image": "^2.1.0",
+    "@nuxtjs/robots": "^7.0.2",
+    "@nuxtjs/sitemap": "^9.1.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "lenis": "^1.3.27",
+    "motion-v": "^2.8.0",
+    "nuxt": "^4.6.2",
+    "tailwindcss": "^4.3.3"
+  }
+}

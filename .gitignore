@@ -1,0 +1,33 @@
+# deps / build
+node_modules/
+.nuxt/
+.output/
+.data/
+.cache/
+dist/
+*.log
+
+# local tool state and QA artefacts (large, regenerable)
+.inspect-*/
+.taste-skill/
+.impeccable/
+screens/
+review/**/*.png
+review/**/*.jpg
+review/**/*.jpeg
+review/**/*.webp
+review/**/*.mjs
+review/shots/
+review/*-verify/
+review/final-*/
+review/motion-frames/
+review/crepes-motion/
+review/crepes-widths/
+
+# third-party reference captures (screenshots of other sites are not ours to publish)
+references/*/
+!references/*.md
+
+.DS_Store
+.env
+.env.*

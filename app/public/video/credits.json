@@ -1,0 +1,91 @@
+[
+ {
+  "files": [
+   "app/public/video/palm-sunset-1280.mp4",
+   "app/public/video/palm-sunset-720.mp4",
+   "app/public/video/palm-sunset-1280.webm",
+   "app/public/video/palm-sunset-1920.mp4",
+   "app/public/video/palm-sunset-1920.webm"
+  ],
+  "poster": "app/public/video/palm-sunset-poster.jpg",
+  "media": "video",
+  "ref": "commons:58186740",
+  "title": "Free video clip - Sunset through Palm Tree",
+  "creator": "Johann Mynhardt",
+  "date": "2012-10-07",
+  "license": "CC BY 2.0",
+  "licenseCode": "by",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Free_video_clip_-_Sunset_through_Palm_Tree.webm",
+  "via": "Wikimedia Commons",
+  "sourceWidth": 1920,
+  "sourceHeight": 1080,
+  "sourceDuration": 15,
+  "loopDuration": 13.52,
+  "credit": "\"Free video clip - Sunset through Palm Tree\" by Johann Mynhardt, CC BY 2.0, via Wikimedia Commons (trimmed, looped)",
+  "changes": "Cut to 0–15 s of the source (whole clip), last 1–1.5 s cross-faded into the start for a seamless loop (13.52 s); audio removed; scaled to 1280 and 720 px wide; re-encoded as H.264 MP4 and VP9 WebM; poster = first frame of the loop at 1600 px. No colour changes. 2026-10-18: added a 1920 px version (H.264 crf 28, 2.8 MB; VP9 crf 39, 2.4 MB) from the same 1920×1080 source and the same loop, served to screens ≥ 1200 px wide or ≥ 768 px at DPR > 1.5; poster 1920 webp (150 KB).",
+  "posterVariants": [
+   "app/public/video/palm-sunset-poster-1600.webp",
+   "app/public/video/palm-sunset-poster-800x1000.webp",
+   "app/public/video/palm-sunset-poster-1920.webp"
+  ],
+  "alsoUsedIn": [
+   {
+    "file": "app/public/og.png",
+    "alt": "app/public/og.jpg",
+    "changes": "Social card 1200x630 (imagery pass 2026-10-17): the 1600 poster frame cropped (object-position 62% 55%) under a drawn yellow fascia, the Una Mattina wordmark, an apricot/cream awning and a cream text board. No colour change to the frame. Credit for the frame stays on the site (hero credit line)."
+   }
+  ]
+ },
+ {
+  "files": [
+   "app/public/video/beach-drone-1280.mp4",
+   "app/public/video/beach-drone-720.mp4",
+   "app/public/video/beach-drone-1280.webm"
+  ],
+  "poster": "app/public/video/beach-drone-poster.jpg",
+  "media": "video",
+  "ref": "commons:41414582",
+  "title": "Beach filmed with a drone",
+  "creator": "Nicolas de Camaret",
+  "date": "2015-04-12",
+  "license": "CC BY 2.0",
+  "licenseCode": "by",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Beach_filmed_with_a_drone.webm",
+  "via": "Wikimedia Commons",
+  "sourceWidth": 1920,
+  "sourceHeight": 1080,
+  "sourceDuration": 9.7,
+  "loopDuration": 8.61,
+  "credit": "\"Beach filmed with a drone\" by Nicolas de Camaret, CC BY 2.0, via Wikimedia Commons (trimmed, looped, colour-graded)",
+  "changes": "Cut to 0–9.6 s of the source, last 1–1.5 s cross-faded into the start for a seamless loop (8.61 s); audio removed; scaled to 1280 and 720 px wide; re-encoded as H.264 MP4 and VP9 WebM; poster = first frame of the loop at 1600 px. Colour: gentle warm colour balance (+red / −blue, saturation 0.95)."
+ },
+ {
+  "files": [
+   "app/public/video/izola-sunset-1280.mp4",
+   "app/public/video/izola-sunset-720.mp4",
+   "app/public/video/izola-sunset-1280.webm"
+  ],
+  "poster": "app/public/video/izola-sunset-poster.jpg",
+  "media": "video",
+  "ref": "commons:116114502",
+  "title": "Sonnenuntergang Izola Isola Adria Slowenien -reisenundleben",
+  "creator": "Reisen Und Leben Reiseblog Reisefotografie",
+  "date": "2022-03-13",
+  "license": "CC BY 3.0",
+  "licenseCode": "by",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "creditRequired": true,
+  "page": "https://commons.wikimedia.org/wiki/File:Sonnenuntergang_Izola_Isola_Adria_Slowenien_-reisenundleben.webm",
+  "via": "Wikimedia Commons",
+  "sourceWidth": 1920,
+  "sourceHeight": 1080,
+  "sourceDuration": 43.6,
+  "loopDuration": 12.5,
+  "credit": "\"Sonnenuntergang Izola Isola Adria Slowenien -reisenundleben\" by Reisen Und Leben Reiseblog Reisefotografie, CC BY 3.0, via Wikimedia Commons (trimmed, looped, colour-graded)",
+  "changes": "Cut to 4–18 s of the source, last 1–1.5 s cross-faded into the start for a seamless loop (12.5 s); audio removed; scaled to 1280 and 720 px wide; re-encoded as H.264 MP4 and VP9 WebM; poster = first frame of the loop at 1600 px. Colour: gentle warm colour balance (+red / −blue, saturation 0.95)."
+ }
+]
