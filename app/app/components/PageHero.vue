@@ -23,6 +23,8 @@ const props = withDefaults(defineProps<{
   layout?: 'split' | 'type' | 'heavy' | 'photo'
   lines?: string[]
   voice?: string
+  /** BCP-47 language of the voice line, e.g. 'it' for "Buongiorno," */
+  voiceLang?: string
   photo?: HeroPhoto
   photoMobile?: HeroPhoto
   alt?: string
@@ -31,7 +33,7 @@ const props = withDefaults(defineProps<{
   tint?: number
   tintWide?: number
   curtain?: boolean
-}>(), { layout: 'split', lead: '', lines: () => [], voice: '', alt: '', position: '50% 50%', positionMobile: '', tint: undefined, tintWide: undefined, curtain: false })
+}>(), { layout: 'split', lead: '', lines: () => [], voice: '', voiceLang: '', alt: '', position: '50% 50%', positionMobile: '', tint: undefined, tintWide: undefined, curtain: false })
 const slots = useSlots()
 const short = computed(() => props.title.length <= 14)
 const v2 = computed(() => props.layout === 'heavy' || props.layout === 'photo')
@@ -133,7 +135,7 @@ onMounted(() => {
         <div class="tint" :style="tintStyle" />
       </div>
       <div class="wrap phx__body">
-        <p v-if="voice" class="voice phx__voice phx__tuck"><span class="phx__vmask"><span class="phx__vline">{{ voice }}</span></span></p>
+        <p v-if="voice" class="voice phx__voice phx__tuck" :lang="voiceLang || undefined"><span class="phx__vmask"><span class="phx__vline">{{ voice }}</span></span></p>
         <div class="phx__title phx__tuck"><RiseText :id="id" as="h1" size="xl" by="letter" trigger="load" :delay="voice ? 260 : 180" :lines="titleLines" /></div>
         <p v-if="lead || $slots.lead" class="lead phx__lead phx__tuck m-in" style="--m-d: 560ms"><slot name="lead">{{ lead }}</slot></p>
         <div v-if="$slots.actions" class="pills phx__actions phx__tuck m-in" style="--m-d: 720ms"><slot name="actions" /></div>

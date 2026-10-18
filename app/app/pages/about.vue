@@ -5,16 +5,19 @@ import { markets } from '~/data/markets'
 const marketsConfirmed = markets.some(m => !m.tbc)
 definePageMeta({ awning: 'apricot', field: 'yellow' })
 usePageSeo({ title: 'About', description: 'Una Mattina means "one morning". We started with crêpes at the Naples farmers markets; Events & Catering is next, and one day a café.' })
+// Events v2 (events-v2-system.md §8 About): heavy hero whose letter rise lands on the Ê (its circumflex drops last,
+// page CSS) → three suns at three heights → the sign flip (signature) → the title over the lemons band → who we are
+// → close. Motion budget: hero load · suns (scrubbed) · sign flip · band title rise · founders' panel unveil · close.
 // Three positions of the same sun: low over the market, higher for events, fully up for the café.
 const stages = [
-  { id: 'market', t: 'Market, today', rise: 0.3, d: 'Crêpes at the Naples farmers markets. Where we test every recipe and meet most of our neighbours.' },
-  { id: 'events', t: 'Events, next', rise: 0.65, d: 'Planning, our own florals and stations made in front of your guests, at your home or on the beach.' },
-  { id: 'cafe', t: 'A café, one day', rise: 1, d: 'An Una Mattina café: a place for mornings.' },
+  { id: 'market', t: ['Market,', 'today'], rise: 0.3, d: 'Crêpes at the Naples farmers markets. Where we test every recipe and meet most of our neighbours.' },
+  { id: 'events', t: ['Events,', 'next'], rise: 0.65, d: 'Planning, our own florals and stations made in front of your guests, at your home or on the beach.' },
+  { id: 'cafe', t: ['A café,', 'one day'], rise: 1, d: 'An Una Mattina café: a place for mornings.' },
 ]
 
-// A2 signature: a sunrise. Each sun climbs out from behind the horizon to its height.
-// Where the browser has scroll-driven animations, the rise is scrubbed by the scroll (pure CSS, see styles).
-// Elsewhere it plays once when the horizon enters view. Final position is the default (no JS, reduced motion).
+// The suns climb out from behind the horizon to their heights. Where the browser has scroll-driven animations the rise
+// is scrubbed by the scroll (pure CSS); elsewhere it plays once when the horizon enters view. Final position is the
+// default (no JS, reduced motion).
 const sky = ref<HTMLElement>()
 const waiting = ref(false)
 const risen = ref(false)
@@ -43,16 +46,19 @@ onBeforeUnmount(() => io?.disconnect())
 
 <template>
   <div>
-    <!-- A1: split hero, the apron concept image capped at 320 px -->
-    <PageHero id="about-title" class="ab-hero" title="It started with a crêpe">
-      <template #lead><i lang="it">Una mattina</i> means "one morning" in Italian. Ours start at the farmers market, with a cream tent, a striped apron and a griddle.</template>
-      <template #actions><NuxtLink to="/inquire" class="btn btn-primary">Start an inquiry</NuxtLink></template>
-      <template #side>
-        <ConceptImage class="ab-hero__img" src="/img/placeholder/apron.webp" alt="Illustration of a person in a white T-shirt and an apricot and cream striped Una Mattina apron, head out of frame" :width="350" :height="515" ratio="350 / 515" sizes="320px" />
-      </template>
-    </PageHero>
+    <div class="ab-hero">
+      <PageHero id="about-title" layout="heavy" title="It started with a crêpe" :lines="['It started', 'with a crêpe']">
+        <template #lead><i lang="it">Una mattina</i> means "one morning" in Italian. Ours start at the farmers market, with a cream tent, a striped apron and a griddle.</template>
+        <template #actions><NuxtLink to="/inquire" class="pill pill--ink">Start an inquiry <span class="pill__arrow" aria-hidden="true">→</span></NuxtLink></template>
+        <template #side>
+          <Board tone="deep" valance="apricot" drop class="ab-hero__board">
+            <ConceptImage class="ab-hero__img" src="/img/placeholder/apron.webp" alt="Illustration of a person in a white T-shirt and an apricot and cream striped Una Mattina apron, head out of frame" :width="350" :height="515" ratio="350 / 515" sizes="320px" settle />
+          </Board>
+        </template>
+      </PageHero>
+    </div>
 
-    <!-- A2: one sun at three heights over a real horizon: sky on cream, the land is a cream-deep band -->
+    <!-- one sun at three heights over a real horizon: sky on cream, the land is a cream-deep band -->
     <section class="stages" aria-labelledby="stages-title">
       <h2 id="stages-title" class="sr-only">Market, events, café</h2>
       <div class="wrap">
@@ -63,7 +69,7 @@ onBeforeUnmount(() => io?.disconnect())
       <div class="stages__land">
         <ol class="wrap stages__list">
           <li v-for="s in stages" :key="s.id" class="stage">
-            <h3 class="sign-m stage__t">{{ s.t }}</h3>
+            <h3 class="display-m stage__t">{{ s.t[0] }}<br>{{ s.t[1] }}</h3>
             <p class="stage__d">{{ s.d }}</p>
             <div v-if="s.id === 'market'" class="stage__more">
               <MarketStatus v-if="marketsConfirmed" />
@@ -75,38 +81,38 @@ onBeforeUnmount(() => io?.disconnect())
       </div>
     </section>
 
-    <!-- A3: the mark, apricot band -->
-    <section class="mark" aria-labelledby="mark-title">
+    <!-- signature: the mark turns from the sunrise A into the crêpe cone (apricot field) -->
+    <section class="mark field-apricot" aria-labelledby="mark-title">
       <div class="wrap mark__grid">
-        <div class="mark__signs">
-          <BrandSign class="mark__sign" label="The Una Mattina A with a rising sun" />
-          <BrandSign class="mark__sign" inverted label="The same mark upside down, like a crêpe in a paper cone" />
+        <div class="mark__text">
+          <RiseText id="mark-title" :lines="['One mark,', 'two mornings']" size="l" />
+          <p class="mark__hint">Tap or click the sign to turn it.</p>
         </div>
-        <div>
-          <h2 id="mark-title" v-lines class="sign-m">One mark, two mornings</h2>
-          <p class="statement mark__body">The A in our name is a sunrise. Turn it upside down and it's a crêpe in its paper cone.</p>
-        </div>
+        <SignFlip class="mark__flip" :captions="['The A in our name is a sunrise.', 'Upside down, a crêpe in its cone.']" />
       </div>
     </section>
 
-    <!-- A4: full-bleed lemons, then the morning we cook for -->
+    <!-- the title over the lemons band; the words of the morning below it -->
     <section class="med" aria-labelledby="med-title">
-      <FoundPhoto class="med__photo" bleed :photo="credits.lemons" ratio="21 / 9" :parallax="0.07" alt="Amalfi lemons with their leaves hanging against a white wall" />
+      <FoundPhoto class="med__photo" bleed :photo="credits.lemons" ratio="21 / 9" :tint="0.62" credit="over" :parallax="0.07" alt="Amalfi lemons with their leaves hanging against a white wall">
+        <div class="wrap med__over">
+          <RiseText id="med-title" class="med__title" :lines="['Mornings,', 'Gulf light']" size="l" />
+        </div>
+      </FoundPhoto>
       <div class="wrap med__grid">
-        <h2 id="med-title" v-lines class="sign-m">Mornings, Gulf light</h2>
         <p class="med__body">Coffee, something warm from the griddle, fruit, flowers on the table and nowhere to be. That's the morning we cook for, whether it's a Saturday at the market or a party in your backyard.</p>
       </div>
     </section>
 
-    <!-- A5: who we are, compact -->
-    <section class="team" aria-labelledby="team-title">
+    <!-- who we are -->
+    <section class="team field-deep" aria-labelledby="team-title">
       <div class="wrap team__grid">
         <div class="team__text">
-          <h2 id="team-title" v-lines class="sign-m">Who we are</h2>
-          <p class="team__body">The same team you meet at the crêpe stand on market mornings plans, styles and serves your party.</p>
+          <RiseText id="team-title" :lines="['Who we are']" size="l" />
+          <p class="lead team__body">The same team you meet at the crêpe stand on market mornings plans, styles and serves your party.</p>
           <NuxtLink to="/crepes" class="link link-draw team__link">Come and say hello at the market</NuxtLink>
         </div>
-        <ShootSlot class="team__slot" subject="founders' portrait" tone="apricot" motif="mark" ratio="1 / 1" />
+        <ShootSlot class="team__slot" subject="founders' portrait" tone="apricot" motif="sun" :rise="0.8" ratio="1 / 1" />
       </div>
     </section>
 
@@ -115,34 +121,51 @@ onBeforeUnmount(() => io?.disconnect())
 </template>
 
 <style scoped>
-/* A1 */
-@media (max-width: 767px) { .ab-hero :deep(.ph__actions .btn) { width: 100%; justify-content: center; } }
-.ab-hero__img { width: 100%; max-width: 320px; }
-@media (min-width: 900px) { .ab-hero :deep(.ph__side) { display: grid; justify-items: end; } }
-/* 768–899: the split layout already, so the apron sits beside the title instead of leaving half the field empty */
-@media (min-width: 768px) and (max-width: 899px) {
-  .ab-hero :deep(.ph__grid) { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: end; }
-  .ab-hero :deep(.ph__side) { display: grid; justify-items: end; }
-  .ab-hero.ph :deep(.ph__title) { font-size: 6.4vw; }
+/* ── hero: the apron board stands beside the title from 900 px ── */
+/* fixed widths (never shrink-to-fit): the picture's frame has its height before the file arrives (CLS 0) */
+.ab-hero.ab-hero :deep(.phx__side) { width: 100%; }
+.ab-hero__board { width: calc(320px + 2 * clamp(22px, 2.6vw, 36px)); max-width: 100%; }
+.ab-hero__img { width: 100%; }
+@media (max-width: 599px) { .ab-hero__board { width: calc(240px + 2 * clamp(22px, 2.6vw, 36px)); } }
+@media (min-width: 900px) {
+  .ab-hero.ab-hero :deep(.phx--heavy.phx--side .phx__body) {
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    grid-template-areas: "title side" "lead side" "actions side";
+    grid-template-rows: auto auto 1fr;
+  }
+  .ab-hero.ab-hero :deep(.phx__side) { display: grid; justify-items: end; align-self: start; margin-top: 0; }
+  .ab-hero.ab-hero :deep(.phx__lead) { align-self: start; }
 }
-@media (min-width: 900px) and (max-width: 1099px) { .ab-hero.ph :deep(.ph__title) { font-size: 6vw; } }
-@media (max-width: 599px) { .ab-hero.ph :deep(.ph__title) { font-size: clamp(2.1rem, 10.4vw, 2.6rem); } .ab-hero__img { max-width: 240px; } }
+/* the letter rise lands on the Ê: the E rises with the other letters, then its circumflex drops onto it with the
+   turn spring (the /crepes CRÊPES move). The cell's own glyph is clipped below the circumflex; a copy of the glyph,
+   clipped to the circumflex only, falls into place. Final state without the animation = the plain Ê. */
+.ab-hero { --hat: 0.07em; }
+.ab-hero.ab-hero :deep(.rt__line:nth-child(2) .rt__word:nth-child(3) .rt__mask:nth-child(3) .rt__c) { position: relative; color: transparent; }
+.ab-hero.ab-hero :deep(.rt__line:nth-child(2) .rt__word:nth-child(3) .rt__mask:nth-child(3) .rt__c)::before,
+.ab-hero.ab-hero :deep(.rt__line:nth-child(2) .rt__word:nth-child(3) .rt__mask:nth-child(3) .rt__c)::after {
+  content: "Ê" / ""; position: absolute; left: 0; top: 0; color: var(--page-ink, var(--ink));
+}
+.ab-hero.ab-hero :deep(.rt__line:nth-child(2) .rt__word:nth-child(3) .rt__mask:nth-child(3) .rt__c)::before { clip-path: inset(var(--hat) -0.2em -0.3em -0.2em); }
+.ab-hero.ab-hero :deep(.rt__line:nth-child(2) .rt__word:nth-child(3) .rt__mask:nth-child(3) .rt__c)::after {
+  clip-path: inset(-0.6em -0.2em calc(100% - var(--hat)) -0.2em); animation: ab-hat 700ms var(--spring-turn) 1320ms both;
+}
+/* until it drops, the hat waits far above the mask (the E below it is still rising out of its own mask) */
+@keyframes ab-hat { 0% { transform: translateY(-2em); } 0.1% { transform: translateY(-0.62em); } }
+@media (prefers-reduced-motion: reduce) { .ab-hero.ab-hero :deep(.rt__line:nth-child(2) .rt__word:nth-child(3) .rt__mask:nth-child(3) .rt__c)::after { animation: none; } }
 
-/* A2: the sky row and the text row share one column template, so each sun stands over its own stage.
-   The sky clips at its bottom edge, which is the top edge of the land band: the horizon is a change of tone, not a rule. */
-.stages { padding-top: calc(var(--section) * 0.6); }
+/* ── stages: the sky row and the text row share one column template, so each sun stands over its own stage.
+   The sky clips at its bottom edge, which is the top edge of the land band: the horizon is a change of tone. ── */
+.stages { padding-top: calc(var(--space-section) * 0.7); }
 .stages__sky, .stages__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(16px, 4vw, 48px); }
 .stages__sky { --d: clamp(76px, 24vw, 132px); height: calc(var(--d) * 1.1); overflow: clip; }
 .stages__cell { position: relative; display: block; }
 .stages__sun {
   position: absolute; left: 0; top: 100%; width: var(--d); height: var(--d); border-radius: 50%; background: var(--accent);
-  transform: translateY(calc(var(--rise) * -100%));
+  transform: translateY(calc(var(--rise) * -100%)); transition: transform var(--dur-slow) var(--ease-out);
 }
 .stages__cell:nth-child(2) .stages__sun { transition-delay: 120ms; }
 .stages__cell:nth-child(3) .stages__sun { transition-delay: 240ms; }
-.stages__sun { transition: transform var(--dur-slow) var(--ease-out); }
 .stages__sky.is-waiting .stages__sun { transform: none; transition: none; }
-/* Scrubbed sunrise: the suns come up one after another while the horizon scrolls from the bottom of the screen to its middle. */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .stages__sky { view-timeline: --sunrise block; }
@@ -153,47 +176,53 @@ onBeforeUnmount(() => io?.disconnect())
   }
 }
 @keyframes sun-rise { from { transform: none; } to { transform: translateY(calc(var(--rise) * -100%)); } }
-
-.stages__land { background: var(--surface); padding-block: clamp(36px, 4vw, 56px) clamp(72px, 8vw, 120px); }
-.stages__list { list-style: none; margin: 0; grid-template-columns: minmax(0, 1fr); row-gap: clamp(64px, 9vw, 80px); }
-.stage { display: grid; gap: 14px; align-content: start; }
-.stage__d { max-width: 36ch; }
+.stages__land { background: var(--surface); padding-block: clamp(36px, 4vw, 56px) var(--space-section); }
+.stages__list { list-style: none; margin: 0; grid-template-columns: minmax(0, 1fr); row-gap: clamp(72px, 14vw, 112px); }
+.stage { display: grid; gap: var(--space-tight); align-content: start; }
+.stage__t { margin: 0; }
+.stage__d { font-size: 1.0625rem; max-width: 34ch; }
 .stage__more { display: grid; gap: 8px; justify-items: start; margin-top: 6px; }
 .stage__link { display: inline-block; padding-block: 9px; font-weight: 600; }
 .stage__where { font-weight: 500; }
-/* from 700 px the three stages stand side by side under their suns */
-@media (min-width: 700px) { .stages__list { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; } .stages__sky { column-gap: 32px; } }
 @media (min-width: 900px) {
   .stages__sky { --d: clamp(132px, 13vw, 196px); }
   .stages__sky, .stages__list { grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr); column-gap: 48px; }
 }
 
-/* A3 */
-.mark { background: var(--accent); color: var(--ink-deep); padding-block: var(--section); }
-.mark__grid { display: grid; gap: 36px; align-items: center; }
-.mark__signs { display: flex; gap: clamp(24px, 4vw, 64px); }
-.mark__sign { width: clamp(110px, 16vw, 220px); color: var(--ink-deep); --accent: var(--ground); }
-.mark__body { margin-top: 18px; max-width: 30ch; }
-@media (max-width: 599px) { .mark__body { font-size: 1.1875rem; } }
-@media (min-width: 900px) { .mark__grid { grid-template-columns: 1fr 1fr; } }
+/* ── the mark ── */
+.mark { padding-block: var(--space-section); }
+.mark__grid { display: grid; gap: var(--space-head); align-items: center; }
+.mark__hint { margin-top: var(--space-tight); font-weight: 500; }
+.mark__flip { width: min(100%, 360px); }
+/* on apricot the sun is yellow (an apricot sun would vanish) and the strokes logo brown */
+.mark__flip :deep(.flip__sun) { fill: var(--field); }
+.mark__flip :deep(.flip__btn) { color: var(--ink-deep); }
+.mark__flip :deep(.flip__cap) { font-size: var(--step-2); }
+.mark__flip :deep(.flip__line) { text-wrap: balance; }
+@media (min-width: 900px) {
+  .mark__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); column-gap: clamp(32px, 5vw, 96px); }
+  .mark__flip { order: -1; width: min(100%, 440px); justify-self: center; }
+}
 
-/* A4 */
-.med { padding-bottom: var(--section); }
-.med__photo :deep(.found__img) { object-position: 50% 0%; }
-.med__photo :deep(.found__cap) { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
-.med__grid { display: grid; gap: 20px; margin-top: clamp(80px, 8vw, 120px); }
-.med__body { font-size: var(--step-1); line-height: 1.45; max-width: 42ch; }
-@media (max-width: 767px) { .med__photo :deep(.found__frame) { aspect-ratio: 16 / 9 !important; } .med__photo :deep(.found__img) { object-position: 0% 0%; } }
-@media (min-width: 900px) { .med__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; } }
+/* ── lemons band: heavy title over the picture, bottom-left, on the flat multiply tint ── */
+.med { padding-bottom: var(--space-section); }
+.med__photo :deep(.found__over) { padding: 0 0 clamp(24px, 4vw, 56px); }
+.med__over { width: 100%; }
+.med__title { max-width: 11em; }
+.med__title :deep(.rt__h) { color: var(--on-field-dark); }
+@media (max-width: 699px) { .med__photo :deep(.found__frame) { aspect-ratio: 4 / 5 !important; } .med__photo { --found-pos: 62% 50%; } }
+.med__grid { display: grid; margin-top: var(--space-block); }
+.med__body { font-size: var(--step-1); line-height: 1.45; max-width: 40ch; }
+@media (min-width: 900px) { .med__body { max-width: 46ch; } }
 
-/* A5 */
-.team { background: var(--surface); padding-block: calc(var(--section) * 0.5); }
-.team__grid { display: grid; gap: 32px; }
-.team__body { margin-top: 18px; font-size: var(--step-1); line-height: 1.45; max-width: 36ch; }
-.team__link { display: inline-block; margin-top: 14px; padding-block: 9px; font-weight: 600; }
+/* ── who we are ── */
+.team { padding-block: var(--space-section); }
+.team__grid { display: grid; gap: var(--space-block); }
+.team__body { margin-top: var(--space-tight); }
+.team__link { display: inline-block; margin-top: 18px; padding-block: 9px; font-weight: 600; }
 .team__slot { max-width: 320px; }
 @media (min-width: 900px) {
-  .team__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); column-gap: calc(100% / 12 + 48px); align-items: center; }
-  .team__slot { max-width: 320px; justify-self: end; }
+  .team__grid { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); column-gap: calc(100% / 12 + 48px); align-items: end; }
+  .team__slot { max-width: 360px; justify-self: end; }
 }
 </style>

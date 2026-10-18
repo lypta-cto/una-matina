@@ -68,7 +68,7 @@ onBeforeUnmount(() => { clearInterval(timer); io?.disconnect(); document.removeE
 
 <style>
 /* Unscoped: the wheel / list choice keys on html.js (set before first paint, nuxt.config). */
-.ow-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7em; font-weight: 500; font-size: var(--step-1); line-height: 1.25; }
+.ow-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7em; font-weight: 700; font-size: var(--step-1); line-height: 1.25; letter-spacing: -0.01em; }
 @media (min-width: 900px) { .ow-list { columns: 2; column-gap: 32px; display: block; } .ow-list li { margin-bottom: 0.7em; break-inside: avoid; } }
 .ow-win, .ow-toggle { display: none; }
 
@@ -76,14 +76,14 @@ onBeforeUnmount(() => { clearInterval(timer); io?.disconnect(); document.removeE
   html.js .ow-list { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   html.js .ow-win {
     --row: 1.3em; display: block; height: calc(var(--row) * 5); overflow: clip;
-    font-size: min(2.5rem, 4.6vw); font-weight: 500; line-height: var(--row);
+    font-size: min(2.5rem, 4.6vw); font-weight: 700; letter-spacing: -0.015em; line-height: var(--row);
   }
   html.js .ow-toggle {
     display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 12px; padding: 0 14px 0 0;
     background: none; border: 0; color: inherit; font: 600 0.9375rem var(--font-text); cursor: pointer; touch-action: manipulation;
   }
 }
-@media (min-width: 900px) and (prefers-reduced-motion: no-preference) { html.js .ow-win { font-size: min(2.5rem, 2.6vw); } }
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) { html.js .ow-win { font-size: min(2.75rem, calc(2.9 * var(--vw))); } }
 
 .ow-track { list-style: none; margin: 0; padding: 0; transform: translateY(calc(var(--k) * -1 * var(--row))); }
 .ow-track.is-glide { transition: transform 600ms cubic-bezier(0.44, 0, 0.56, 1); }

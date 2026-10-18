@@ -50,7 +50,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
   <div ref="el" class="rot">
     <ul class="sr-only"><li v-for="s in stations" :key="s.id">{{ s.name }}</li></ul>
     <p v-if="reduce" class="sr-plain" aria-hidden="true">{{ stations.map(s => s.short).join(', ') }}</p>
-    <button v-else type="button" class="plank sign-m" aria-hidden="true" tabindex="-1" @click="go((idx + 1) % stations.length)">
+    <button v-else type="button" class="plank display-m" aria-hidden="true" tabindex="-1" @click="go((idx + 1) % stations.length)">
       <span class="plank__stack">
         <span v-for="s in stations" :key="s.id" class="plank__sizer">{{ label(s) }}</span>
         <Transition :name="`rot-${dir}`"><span :key="idx" class="plank__t">{{ label(stations[idx]!) }}</span></Transition>
@@ -61,12 +61,12 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 
 <style scoped>
 .rot { max-width: 100%; }
-.plank { display: inline-block; max-width: 100%; padding: 0.18em 0.3em 0.12em; background: var(--ground); color: var(--ink); border: 0; cursor: pointer; text-align: left; touch-action: manipulation; }
+.plank { display: inline-block; max-width: 100%; padding: 0.16em 0.32em 0.1em; line-height: 1; font: inherit; font-family: var(--font-display); font-weight: 700; text-transform: uppercase; letter-spacing: var(--track-m); font-size: var(--display-m); background: var(--ground); color: var(--ink); border: 0; cursor: pointer; text-align: left; touch-action: manipulation; }
 /* every label sits in one cell; the invisible sizers make the plank as wide as the longest one */
 .plank__stack { display: grid; overflow: clip; overflow-clip-margin: 0.04em; }
 .plank__stack > * { grid-area: 1 / 1; white-space: nowrap; }
 .plank__sizer { visibility: hidden; }
-.sr-plain { font-weight: 600; font-size: var(--step-1); }
+.sr-plain { font-weight: 700; font-size: var(--step-1); line-height: 1.3; }
 .rot-up-enter-active, .rot-up-leave-active, .rot-down-enter-active, .rot-down-leave-active { transition: transform var(--dur-base) var(--ease-out); }
 .rot-up-enter-from, .rot-down-leave-to { transform: translateY(105%); }
 .rot-up-leave-to, .rot-down-enter-from { transform: translateY(-105%); }

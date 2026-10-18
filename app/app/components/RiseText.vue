@@ -17,7 +17,9 @@ const props = withDefaults(defineProps<{
   trigger?: 'load' | 'view'
   delay?: number
   fit?: boolean
-}>(), { as: 'h2', size: 'l', by: 'word', trigger: 'view', delay: 0, fit: true })
+  /** per-heading average cap width in em for the fit (default from CSS --cap-w ≈ 0.7; use ~0.74 for lines heavy in W/M) */
+  capW?: number
+}>(), { as: 'h2', size: 'l', by: 'word', trigger: 'view', delay: 0, fit: true, capW: undefined })
 
 const step = computed(() => (props.by === 'letter' ? 30 : props.by === 'word' ? 55 : 0))
 const lineStep = computed(() => (props.by === 'line' ? 90 : 120))
@@ -37,7 +39,7 @@ const longest = computed(() => Math.max(1, ...props.lines.map(l => Array.from(l)
 </script>
 
 <template>
-  <div class="rt" :class="[`rt--${props.size}`, { 'rt--fit': props.fit }]" :style="{ '--fit-n': longest }">
+  <div class="rt" :class="[`rt--${props.size}`, { 'rt--fit': props.fit }]" :style="{ '--fit-n': longest, ...(props.capW ? { '--cap-w': String(props.capW) } : {}) }">
     <component
       :is="props.as"
       v-stage="props.trigger === 'view' ? total : false"

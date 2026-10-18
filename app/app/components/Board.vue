@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<{
 <style scoped>
 .board { position: relative; display: grid; gap: 14px; align-content: start; padding: clamp(22px, 2.6vw, 36px); min-width: 0; }
 .board--valance { padding-top: calc(clamp(22px, 2.6vw, 36px) + 14px); }
-.board__valance { position: absolute; top: 0; left: 0; right: 0; }
+.board > .board__valance.board__valance { position: absolute; top: 0; left: 0; right: 0; }
 .board__valance.awning--drop { animation-delay: calc(var(--m-d, 0ms) + 300ms); }
 .board--brown { background: var(--field-dark); color: var(--on-field-dark); --focus-ring: var(--on-field-dark); }
 .board--cream { background: var(--ground); color: var(--ink); }

@@ -17,7 +17,9 @@ const services = [
 const q = (k: string) => String(route.query[k] ?? '').split(',').filter(Boolean)
 
 const form = reactive({
-  name: '', email: '', phone: '', eventType: '', date: '', flexible: false, area: '', locationType: '', guests: '',
+  name: '', email: '', phone: '', eventType: '', date: '', flexible: false, area: '', locationType: '',
+  // ?guests= from the Live Stations counter: only one of the four ranges is accepted
+  guests: guestRanges.find(g => g === String(route.query.guests ?? '')) ?? '',
   services: q('services').filter(s => services.some(x => x.id === s)),
   stations: q('stations').filter(s => stations.some(x => x.id === s)),
   message: '', company: '',
@@ -112,10 +114,18 @@ const rows = computed(() => {
   if (showStations.value) r.push({ k: 'Stations', v: stations.filter(s => form.stations.includes(s.id)).map(s => s.short).join(', ') })
   return r
 })
-// How much of the read-back is filled: drives the sun over the board and the "n of m" count.
+// How much of the read-back is filled: the "Two of six" count.
 const answered = computed(() => rows.value.filter(r => r.v).length)
-const progress = computed(() => (state.value === 'sent' ? 1 : answered.value / rows.value.length))
 const mobOpen = ref(false)
+// The count reads in words ("Two of six"), like the step counters elsewhere on the site.
+const words = ['None', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven']
+const countText = computed(() => (answered.value ? `${words[answered.value]} of ${words[rows.value.length]!.toLowerCase()}` : `${words[rows.value.length]} questions`))
+// What happens after sending: the foot of the summary board (was its own band).
+const next = [
+  'We read it and reply with questions.',
+  'We talk it through, by call or over coffee.',
+  "You get a written proposal built on your event's real scope.",
+]
 const firstName = computed(() => form.name.trim().split(/\s+/)[0])
 </script>
 
@@ -210,65 +220,80 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
 
         <div class="f__end">
           <details class="inq__mob" @toggle="mobOpen = ($event.target as HTMLDetailsElement).open">
-            <summary class="inq__mob-sum"><span>Your event so far</span><span class="inq__mob-n tnum">{{ answered }} of {{ rows.length }}</span><span class="inq__plus" aria-hidden="true" /></summary>
+            <summary class="inq__mob-sum"><span>Your event so far</span><span class="inq__mob-n">{{ countText }}</span><span class="inq__plus" aria-hidden="true" /></summary>
             <div v-if="mobOpen" class="inq__mob-body"><InqSummary :rows="rows" /></div>
           </details>
 
           <div class="f__submit">
-            <button ref="submitBtn" type="submit" class="btn btn-primary" :aria-disabled="state === 'sending' ? 'true' : undefined">{{ state === 'sending' ? 'Sending…' : 'Send inquiry' }}</button>
+            <button ref="submitBtn" type="submit" class="pill pill--sun pill--on-light f__send" :aria-disabled="state === 'sending' ? 'true' : undefined">{{ state === 'sending' ? 'Sending…' : 'Send inquiry' }} <span v-if="state !== 'sending'" class="pill__arrow" aria-hidden="true">→</span></button>
             <p v-if="state === 'error'" class="f__err f__fail" role="alert">
               {{ failure === 'timeout' ? 'This is taking too long, so we stopped trying. Your answers are still here: check your connection and send again' : 'Something went wrong on our side. Your answers are still here: send again in a moment' }}<template v-if="contact.email.confirmed">, or write to <a :href="`mailto:${contact.email.value}`" class="link">{{ contact.email.value }}</a></template>.
             </p>
           </div>
         </div>
       </form>
+      <slot />
     </div>
 
     <aside class="inq__side" aria-labelledby="inq-sum-title">
-      <!-- The board's sun climbs from behind the board as answers come in; fully up once it is sent. -->
-      <div class="sky" aria-hidden="true"><span class="sky__sun" :style="{ transform: `translateY(${-progress * 100}%)` }" /></div>
-      <div class="board">
-        <div class="board__head">
-          <h2 id="inq-sum-title" class="board__title">{{ state === 'sent' ? 'What you sent us' : 'Your event so far' }}</h2>
-          <p class="board__n tnum">{{ answered }} of {{ rows.length }}</p>
+      <Board tone="brown" valance="apricot" class="inq__board">
+        <div class="inq__live">
+          <div class="inq__head">
+            <h2 id="inq-sum-title" class="inq__title">{{ state === 'sent' ? 'What you sent us' : 'Your event so far' }}</h2>
+            <p class="inq__n">{{ countText }}</p>
+          </div>
+          <InqSummary :rows="rows" />
         </div>
-        <InqSummary :rows="rows" />
-      </div>
+        <div class="inq__next">
+          <h2 class="inq__next-t">What happens next</h2>
+          <ol class="inq__steps">
+            <li v-for="(n, i) in next" :key="n" class="inq__step">
+              <span class="inq__step-n" aria-hidden="true">{{ i + 1 }}</span>
+              <span>{{ n }}<template v-if="i === 0 && contact.replyTime.confirmed"> Usually {{ contact.replyTime.value }}.</template></span>
+            </li>
+          </ol>
+        </div>
+      </Board>
     </aside>
   </div>
 </template>
 
 <style scoped>
-.inq { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; }
+.inq { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-block); }
 .inq__main { min-width: 0; }
-.inq__side { display: none; }
 @media (min-width: 900px) {
   .inq { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(24px, 2.4vw, 40px); align-items: start; }
   .inq__main { grid-column: 1 / span 7; }
-  .inq__side { display: block; grid-column: 9 / span 4; position: sticky; top: 96px; }
+  .inq__side { grid-column: 8 / span 5; position: sticky; top: 96px; }
   .inq__mob { display: none; }
 }
+@media (min-width: 1200px) { .inq__side { grid-column: 9 / span 4; } }
 
-/* Summary board + its sun. The sky's bottom edge is the board's top edge, so the sun rises from behind the board. */
-.sky { --d: 72px; position: relative; height: var(--d); overflow: clip; margin-right: clamp(24px, 2.4vw, 36px); }
-.sky__sun {
-  position: absolute; right: 0; top: 100%; width: var(--d); height: var(--d); border-radius: 50%; background: var(--accent);
-  transition: transform var(--dur-slow) var(--ease-out);
-}
-.board { background: var(--surface); padding: clamp(24px, 2.4vw, 36px); display: grid; gap: 22px; }
-.board__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.board__title { font-family: var(--font-text); font-weight: 600; font-size: var(--step-1); line-height: 1.25; letter-spacing: 0; text-transform: none; }
-.board__n { flex: none; font-weight: 500; font-size: var(--step--1); color: var(--ink-muted); }
+/* Summary: a brown board with an apricot valance (the /crepes hero board). Phones: only its foot (what happens next)
+   is shown, after the form; the read-back itself is the disclosure above the submit. */
+.inq__board.board { gap: 0; padding-bottom: clamp(24px, 2.6vw, 36px); }
+.inq__live { display: none; container-type: inline-size; }
+@media (min-width: 900px) { .inq__live { display: grid; gap: 22px; padding-bottom: clamp(26px, 2.6vw, 34px); } }
+.inq__head { display: grid; gap: 4px; }
+.inq__title { font: 700 var(--step-2)/1.1 var(--font-display); letter-spacing: -0.01em; text-transform: none; }
+.inq__n { font-weight: 500; font-size: 0.9375rem; color: color-mix(in srgb, var(--on-field-dark) 80%, var(--field-dark)); }
+.inq__next { display: grid; gap: 14px; }
+@media (min-width: 900px) { .inq__next { padding-top: clamp(12px, 1.6vw, 20px); } }
+.inq__next-t { font: 700 1.0625rem/1.3 var(--font-text); letter-spacing: 0; text-transform: none; }
+.inq__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.inq__step { display: grid; grid-template-columns: 1.6em minmax(0, 1fr); font-family: var(--font-accent); font-style: italic; font-size: 1.125rem; line-height: 1.35; }
+.inq__step-n { font: 600 0.9375rem/1.6 var(--font-text); font-style: normal; color: var(--accent); }
 
-.inq__mob { background: var(--surface); }
-.inq__mob-sum { display: flex; align-items: center; gap: 16px; min-height: 56px; padding: 14px 20px; cursor: pointer; list-style: none; font-weight: 600; font-size: var(--step-1); line-height: 1.3; }
+.inq__mob { background: var(--field-dark); color: var(--on-field-dark); --focus-ring: var(--on-field-dark); }
+.inq__mob :focus-visible { outline-color: var(--on-field-dark); }
+.inq__mob-sum { display: flex; align-items: center; gap: 16px; min-height: 56px; padding: 14px 20px; cursor: pointer; list-style: none; font-weight: 700; font-size: 1.125rem; line-height: 1.3; }
 .inq__mob-sum::-webkit-details-marker { display: none; }
-.inq__mob-n { margin-left: auto; font-weight: 500; font-size: var(--step--1); color: var(--ink-muted); white-space: nowrap; }
+.inq__mob-n { margin-left: auto; font-weight: 500; font-size: 0.875rem; white-space: nowrap; color: color-mix(in srgb, var(--on-field-dark) 80%, var(--field-dark)); }
 .inq__plus { position: relative; flex: none; width: 16px; height: 16px; }
 .inq__plus::before, .inq__plus::after { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: currentColor; }
 .inq__plus::after { transform: rotate(90deg); transition: transform var(--dur-base) var(--ease-out); }
 .inq__mob[open] .inq__plus::after { transform: rotate(0deg); }
-.inq__mob-body { padding: 4px 20px 22px; }
+.inq__mob-body { padding: 4px 20px 22px; container-type: inline-size; }
 
 .f { display: grid; gap: clamp(76px, 6vw, 88px); }
 .f__group { border: 0; margin: 0; padding: 0; display: grid; gap: 14px; min-width: 0; }
@@ -297,42 +322,44 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
 .f__check { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 0.9375rem; cursor: pointer; justify-self: start; }
 .f__check input { width: 20px; height: 20px; accent-color: var(--ink); }
 
-/* Chips. A drawn marker says what kind of choice it is (circle = one, square = any) and carries the selected
+/* Chips are pills (the half-round ends of the site's actions). A drawn marker says what kind of choice it is (circle = one, square = any) and carries the selected
    state without relying on colour: a dot or a tick appears inside it. Width never changes, so rows never reflow. */
 .f__chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { position: relative; cursor: pointer; -webkit-tap-highlight-color: transparent; }
 .chip__in { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .chip__face {
-  position: relative; display: inline-flex; align-items: center; min-height: 46px; padding: 0 16px 0 40px; border: 2px solid var(--ink); background: var(--ground);
-  font-weight: 500; font-size: 0.9375rem; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
+  position: relative; display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px 0 44px; border: 2px solid var(--ink); border-radius: 999px; background: var(--ground);
+  font-weight: 500; font-size: 0.9375rem; white-space: nowrap; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
   transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
-.chip__face::before { content: ""; position: absolute; left: 14px; top: 50%; width: 16px; height: 16px; margin-top: -8px; border: 2px solid currentColor; box-sizing: border-box; }
+.chip__face::before { content: ""; position: absolute; left: 17px; top: 50%; width: 16px; height: 16px; margin-top: -8px; border: 2px solid currentColor; box-sizing: border-box; }
 .chip__in[type="radio"] + .chip__face::before { border-radius: 50%; }
 .chip__face::after {
   content: ""; position: absolute; opacity: 0; transform: scale(0.6);
   transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
 /* radio: a dot */
-.chip__in[type="radio"] + .chip__face::after { left: 18px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: currentColor; }
+.chip__in[type="radio"] + .chip__face::after { left: 21px; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: currentColor; }
 /* checkbox: a tick drawn from two borders */
-.chip__in[type="checkbox"] + .chip__face::after { left: 19px; top: 50%; width: 6px; height: 10px; margin-top: -7px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0.6); }
+.chip__in[type="checkbox"] + .chip__face::after { left: 22px; top: 50%; width: 6px; height: 10px; margin-top: -7px; border: solid currentColor; border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0.6); }
 .chip__in:checked + .chip__face { background: var(--accent); color: var(--on-accent); }
 .chip__in:checked + .chip__face::after { opacity: 1; transform: none; }
 .chip__in[type="checkbox"]:checked + .chip__face::after { transform: rotate(45deg); }
-.chip:active .chip__face { transform: translateY(1px); }
-.chip__in:focus-visible + .chip__face { outline: 3px solid var(--ink); outline-offset: 2px; }
+.chip:active .chip__face { transform: scale(0.97); }
+.chip__in:checked + .chip__face::before { border-color: currentColor; }
+.chip__in:focus-visible + .chip__face { outline: 3px solid var(--ink); outline-offset: 3px; }
 .is-invalid .chip__face { border-color: var(--danger); }
-.is-invalid .chip__in:focus + .chip__face { outline: 3px solid var(--ink); outline-offset: 2px; }
+.is-invalid .chip__in:focus + .chip__face { outline: 3px solid var(--ink); outline-offset: 3px; }
 @media (hover: hover) and (pointer: fine) { .chip:hover .chip__in:not(:checked) + .chip__face { background: var(--surface); } }
+@media (max-width: 379px) { .chip__face { white-space: normal; padding-block: 10px; line-height: 1.3; } }
 
 .f__err { color: var(--danger); font-weight: 500; font-size: 0.9375rem; }
 .f__fail { max-width: 46ch; overflow-wrap: anywhere; }
 .f__hp { position: absolute; left: -9999px; }
 .f__end { display: grid; gap: 16px; }
 .f__submit { display: grid; gap: 12px; justify-items: start; }
-.f__submit .btn[aria-disabled="true"] { cursor: progress; }
-@media (max-width: 599px) { .f__submit .btn { width: 100%; justify-content: center; } }
+@media (max-width: 599px) { .f__send { width: 100%; } }
+.sent .statement { font-size: var(--step-3); line-height: 1.15; overflow-wrap: anywhere; }
 .sent { background: var(--surface); padding: clamp(24px, 4vw, 56px); display: grid; gap: 12px; min-width: 0; }
 .sent:focus { outline: none; }
 .sent:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
