@@ -1,0 +1,181 @@
+{
+ "crepes-320x568": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 16,
+  "H": 7614
+ },
+ "crepes-360x640": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 15,
+  "H": 7921
+ },
+ "crepes-390x844": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 13,
+  "H": 9083
+ },
+ "crepes-768x1024": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 10458
+ },
+ "crepes-1024x768": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 7869
+ },
+ "crepes-1280x800": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 8017
+ },
+ "crepes-1440x900": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 8834
+ },
+ "crepes-1920x1080": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"CrêpesCREÊPES\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 11,
+  "H": 10106
+ },
+ "bloom-cart-320x568": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 3",
+   "H2 \"Bring theBloom Cart\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 11,
+  "H": 4938
+ },
+ "bloom-cart-360x640": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 3",
+   "H2 \"Bring theBloom Cart\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 10,
+  "H": 5169
+ },
+ "bloom-cart-390x844": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 3",
+   "H2 \"Bring theBloom Cart\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 9,
+  "H": 5873
+ },
+ "bloom-cart-768x1024": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 4",
+   "H2 \"Ideal forIdeal for\" 3",
+   "H2 \"Bring theBloom Cart\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 8,
+  "H": 6450
+ },
+ "bloom-cart-1024x768": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 4",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 4",
+   "H2 \"Bring theBloom Cart\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 8,
+  "H": 4779
+ },
+ "bloom-cart-1280x800": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 3",
+   "H2 \"Bring theBloom Cart\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 8,
+  "H": 5105
+ },
+ "bloom-cart-1440x900": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 3",
+   "H2 \"Bring theBloom Cart\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 8,
+  "H": 5616
+ },
+ "bloom-cart-1920x1080": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Pick a stem, take it homePick a stem,tak\" 3",
+   "H2 \"From bucket to bouquetFrom bucketto bouq\" 3",
+   "H2 \"Bring theBloom Cart\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 7,
+  "H": 6274
+ }
+}

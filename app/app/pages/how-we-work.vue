@@ -46,7 +46,7 @@ function jump(e: MouseEvent, n: number) {
         <RiseText id="hw-rule-title" class="hw-rule__t" :lines="['Running it,', 'not serving it']" size="l" />
         <div v-stage class="hw-rule__side">
           <p class="statement hw-rule__s st-in">The person running your event never stands at a station or a bar at the same time.</p>
-          <p class="hw-rule__note st-in" style="--i: 2">For beaches, parks and other public places, we confirm the rules and any permits before we finalise your booking.</p>
+          <p class="hw-rule__note st-in" style="--i: 2">For beaches, parks and other public places, we confirm the rules and any permits before we finalize your booking.</p>
         </div>
       </div>
     </section>

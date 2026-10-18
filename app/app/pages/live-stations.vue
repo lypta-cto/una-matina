@@ -7,7 +7,8 @@
 import { credits } from '~/data/credits'
 import { stations, comingLater } from '~/data/stations'
 definePageMeta({ hero: 'photo', field: 'yellow', awning: 'apricot' })
-usePageSeo({ title: 'Live stations', description: 'Live station catering in Naples, FL: crêpe station, tiramisu bar, fruit cup bar, charcuterie, cannoli bar and cocktail or mocktail bar, prepared in front of your guests.' })
+usePageSeo({ title: 'Live stations', description: 'Live station catering in Naples, FL: crêpe station, tiramisu bar, fruit cup bar, charcuterie, cannoli bar and cocktail or mocktail bar, made live at your party by our own attendants.' })
+const featured = stations[0]!
 const hero = { ...credits.cannoli, src: '/img/world/cannoli-tray.jpg', w: 1600, h: 1280 }
 const later = computed(() => {
   const l = comingLater.map(x => x.replace(' & ', ' and ').toLowerCase())
@@ -18,18 +19,20 @@ const later = computed(() => {
 <template>
   <div class="ls">
     <PageHero
-      id="ls-title" layout="photo" curtain title="Made in front of your guests" :lines="['Made in front', 'of your guests']"
-      :photo="hero" :photo-mobile="credits.cannoli" position="50% 42%" position-mobile="50% 40%" :tint-wide="0.6"
+      id="ls-title" layout="photo" curtain title="At the party, not before it" :lines="['At the party,', 'not before it']"
+      :photo="hero" :photo-mobile="credits.cannoli" position="50% 20%" position-mobile="50% 40%" :tint-wide="0.66"
       alt="A tray of Sicilian cannoli filled with ricotta, finished with pistachio and candied cherry"
       lead="Each station is cooked, layered or poured live by our attendants, on one modular counter that changes with the event."
     >
       <template #actions>
         <a href="#counter" class="pill pill--sun">Pick stations <span class="pill__arrow pill__arrow--down" aria-hidden="true">↓</span></a>
-        <a href="#stations" class="pill pill--ghost">See all six</a>
       </template>
       <template #board>
-        <Board tone="brown" valance="apricot" drop flush="right" as="nav" class="ls-hb" aria-label="The six stations">
-          <a v-for="s in stations" :key="s.id" :href="`#st-${s.id}`" class="ls-hb__row"><span class="ls-hb__t">{{ s.name }}</span><span class="ls-hb__arrow" aria-hidden="true">↓</span></a>
+        <!-- one featured station (the one we started with), not a third copy of the six names -->
+        <Board tone="brown" valance="apricot" drop flush="right" class="ls-hb">
+          <p class="ls-hb__t">{{ featured.name }}</p>
+          <p class="ls-hb__note italic-line"><Tbc note="station description">{{ featured.note }}</Tbc></p>
+          <a href="#stations" class="pill pill--s pill--ghost ls-hb__all">All six stations <span class="pill__arrow pill__arrow--down" aria-hidden="true">↓</span></a>
         </Board>
       </template>
       <template #sheet>
@@ -37,7 +40,7 @@ const later = computed(() => {
         <section id="stations" class="ls-menu" aria-labelledby="menu-title">
           <div class="wrap">
             <div class="ls-menu__head">
-              <RiseText id="menu-title" :lines="['Six stations,', 'all made live']" />
+              <RiseText id="menu-title" :lines="['Six stations', 'to pick from']" />
               <p class="statement ls-menu__side">Every station is run by our own attendants, and dressed with our own flowers.</p>
             </div>
             <LsStationList />
@@ -63,31 +66,11 @@ const later = computed(() => {
 </template>
 
 <style scoped>
-/* the ghost pill is small text over the picture: it sits on its own brown fill at every width (measured p98 4.2:1 without) */
-.ls :deep(.phx__actions .pill--ghost) { background: var(--field-dark); }
-
-/* ── hero board: the six names, each a jump to its row on the menu board ── */
-.ls-hb.board { gap: 0; padding-bottom: clamp(20px, 3svh, 36px); }
-.ls-hb__row {
-  display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 7px 0; min-height: 44px;
-  color: inherit; text-decoration: none; touch-action: manipulation;
-}
-.ls-hb__t { font-weight: 700; font-size: clamp(1.1875rem, 1rem + 0.5 * var(--vw), 1.5rem); line-height: 1.15; letter-spacing: -0.01em; transition: transform 280ms var(--ease-out); }
-.ls-hb__arrow { font-weight: 600; opacity: 0; transform: translateY(-4px); transition: opacity 200ms var(--ease-out), transform 280ms var(--ease-out); }
-.ls-hb__row:focus-visible { outline-offset: 2px; }
-.ls-hb__row:focus-visible .ls-hb__arrow { opacity: 1; transform: none; }
-@media (hover: hover) and (pointer: fine) {
-  .ls-hb__row:hover .ls-hb__t { transform: translateX(6px); }
-  .ls-hb__row:hover .ls-hb__arrow { opacity: 1; transform: none; }
-}
-/* phones and tablets (the board is a band under the lead): two columns of names, so the band stays short */
-@media (max-width: 899px) {
-  .ls-hb.board { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
-  .ls-hb__t { font-size: 1.0625rem; }
-  .ls-hb__row { align-items: center; }
-  .ls-hb__arrow { display: none; }
-}
-@media (min-width: 600px) and (max-width: 899px) { .ls-hb__t { font-size: 1.25rem; } }
+/* ── hero board: the featured station ── */
+.ls-hb.board { gap: 8px; padding-bottom: clamp(22px, 3svh, 36px); }
+.ls-hb__t { font-weight: 700; font-size: clamp(1.5rem, 1.2rem + 0.9 * var(--vw), 2.25rem); line-height: 1.05; letter-spacing: -0.015em; }
+.ls-hb__note { font-size: clamp(1.0625rem, 1rem + 0.25 * var(--vw), 1.25rem); line-height: 1.35; max-width: 30ch; }
+.ls-hb__all { justify-self: start; margin-top: 10px; }
 
 /* ── the menu board (cream sheet) ── */
 .ls-menu { padding-block: var(--space-section); }

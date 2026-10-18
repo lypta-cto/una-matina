@@ -1,0 +1,29 @@
+{
+ "loadFrames": 18,
+ "loadMetrics": {
+  "cls": 0,
+  "lcp": 140,
+  "lcpEl": "hero__glyph",
+  "shifts": []
+ },
+ "perf": {
+  "n": 994,
+  "p50": 16.7,
+  "p95": 16.8,
+  "over34": 0,
+  "cls": 0,
+  "shifts": [
+   {
+    "v": 0,
+    "t": 12137,
+    "src": "seq__railbox"
+   },
+   {
+    "v": 0,
+    "t": 13504,
+    "src": "seq__railbox"
+   }
+  ]
+ },
+ "cons": []
+}

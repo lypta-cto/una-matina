@@ -1,0 +1,108 @@
+{
+ "390": {
+  "empty": {
+   "errors": [
+    "Please tell us your name.",
+    "Please enter an email we can reply to.",
+    "Choose the closest type of event.",
+    "Tell us the city or area.",
+    "Choose a guest count range."
+   ],
+   "focus": "INPUT#f-name top=426 inView=true",
+   "posted": 0
+  },
+  "prefill": {
+   "checked": [
+    "50–100",
+    "Planning & coordination",
+    "Live stations",
+    "Crêpes"
+   ],
+   "board": [
+    "Guests50–100–",
+    "Help withPlanning & coordination, Live stations",
+    "StationsCrêpes"
+   ],
+   "count": "Three of seven",
+   "mob": "Three of seven"
+  },
+  "filledBoard": [
+   "Event Intimate wedding",
+   "Place Naples",
+   "Location Beach",
+   "Guests 50–100 –",
+   "Help with Planning & coordination, Live stations",
+   "Stations Crêpes",
+   "EventIntimate wedding",
+   "PlaceNaples",
+   "LocationBeach",
+   "Guests50–100–",
+   "Help withPlanning & coordination, Live stations",
+   "StationsCrêpes"
+  ],
+  "error": {
+   "alert": "Something went wrong on our side. Your answers are still here: send again in a moment.",
+   "focus": "BUTTON# top=434 inView=true"
+  },
+  "blocked": {
+   "alert": "Something went wrong on our side. Your answers are still here: send again in a moment.",
+   "focus": "BUTTON# top=434 inView=true"
+  },
+  "success": {
+   "text": "Thank you, Ana. We'll write to ana@example.com with a few questions about your day.",
+   "focus": "DIV# top=305 inView=true",
+   "boardTitle": "What you sent us"
+  },
+  "posted": 3
+ },
+ "1440": {
+  "empty": {
+   "errors": [
+    "Please tell us your name.",
+    "Please enter an email we can reply to.",
+    "Choose the closest type of event.",
+    "Tell us the city or area.",
+    "Choose a guest count range."
+   ],
+   "focus": "INPUT#f-name top=472 inView=true",
+   "posted": 0
+  },
+  "prefill": {
+   "checked": [
+    "50–100",
+    "Planning & coordination",
+    "Live stations",
+    "Crêpes"
+   ],
+   "board": [
+    "Guests 50–100 –",
+    "Help with Planning & coordination, Live stations",
+    "Stations Crêpes"
+   ],
+   "count": "Three of seven",
+   "mob": "Three of seven"
+  },
+  "filledBoard": [
+   "Event Intimate wedding",
+   "Place Naples",
+   "Location Beach",
+   "Guests 50–100 –",
+   "Help with Planning & coordination, Live stations",
+   "Stations Crêpes"
+  ],
+  "error": {
+   "alert": "Something went wrong on our side. Your answers are still here: send again in a moment.",
+   "focus": "BUTTON# top=656 inView=true"
+  },
+  "blocked": {
+   "alert": "Something went wrong on our side. Your answers are still here: send again in a moment.",
+   "focus": "BUTTON# top=656 inView=true"
+  },
+  "success": {
+   "text": "Thank you, Ana. We'll write to ana@example.com with a few questions about your day.",
+   "focus": "DIV# top=435 inView=true",
+   "boardTitle": "What you sent us"
+  },
+  "posted": 3
+ }
+}

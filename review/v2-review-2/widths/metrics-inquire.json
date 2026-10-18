@@ -1,0 +1,90 @@
+{
+ "inquire-320x568": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 10,
+  "H": 4549
+ },
+ "inquire-360x640": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 9,
+  "H": 4460
+ },
+ "inquire-390x844": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 6,
+  "H": 4349
+ },
+ "inquire-768x1024": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 4,
+  "H": 3606
+ },
+ "inquire-1024x768": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 6,
+  "H": 3412
+ },
+ "inquire-1280x800": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 5,
+  "H": 3341
+ },
+ "inquire-1440x900": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 5,
+  "H": 3403
+ },
+ "inquire-1920x1080": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Tell us about your dayTell us aboutyour \" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 4,
+  "H": 3468
+ }
+}

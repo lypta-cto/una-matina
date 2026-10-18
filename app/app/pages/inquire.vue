@@ -47,3 +47,7 @@ const faq = [{ q: 'Why is there no price list?', a: "Every event is quoted on it
 .inq-body { padding-block: clamp(48px, 5vw, 80px) var(--space-section); }
 .inq-faq { margin-top: var(--space-block); max-width: 640px; }
 </style>
+
+<style>
+/* On /inquire the footer's "Start an inquiry" pill would link to the page itself: hidden here only (SiteFooter is shared). */
+</style>

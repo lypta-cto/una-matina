@@ -14,6 +14,7 @@ const f = (src: string, w: number, h: number, title: string, creator: string, li
 export const credits = {
   pier: f('/img/world/naples-pier-sunset-21x9.jpg', 2400, 1029, 'Naples FL pier seen from 8th Avenue Beach at sunset', 'P,TO 19104', 'bysa4', 'https://commons.wikimedia.org/wiki/File:Naples_FL_pier_seen_from_8th_Avenue_Beach_at_sunset.jpg'),
   clamPass: f('/img/world/clam-pass-sunset-4x5.jpg', 960, 1200, 'Sunset at Clam Pass Beach, Naples FL', 'P,TO 19104', 'bysa4', 'https://commons.wikimedia.org/w/index.php?curid=107591103'),
+  vanderbilt: f('/img/world/vanderbilt-beach.jpg', 1600, 989, 'Vanderbilt Beach, Naples, Florida', 'Charles Patrick Ewing', 'by2', 'https://commons.wikimedia.org/wiki/File:Vanderbilt_Beach,_Naples,_Florida.jpg', 'cropped'),
   flowers: f('/img/world/flower-market-buckets-4x5.jpg', 848, 1060, 'Flower market buckets', 'Alisa Anton', 'cc0', 'https://commons.wikimedia.org/w/index.php?curid=61815263'),
   griddle: f('/img/world/crepe-griddle-4x5.jpg', 880, 1100, 'A crêpe on a griddle', 'DanielPenfield', 'bysa4', 'https://commons.wikimedia.org/wiki/File:SimplyCrepesPittsfordMapleCrepesGriddle.jpg'),
   cannoli: f('/img/world/cannoli-tray-4x5.jpg', 880, 1100, 'Cannoli siciliani', 'Stefano Mortellaro', 'by2', 'https://commons.wikimedia.org/w/index.php?curid=385058'),

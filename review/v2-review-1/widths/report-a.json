@@ -1,0 +1,1673 @@
+{
+ "crepes": {
+  "320x568": {
+   "load": {
+    "cls": 0,
+    "lcp": 104,
+    "lcpEl": "SPAN.hero__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0.0001,
+    "shifts": [
+     {
+      "v": 0,
+      "t": 5694,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5845,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 6127,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 1,
+     "rt": 0,
+     "fs": "68.8px",
+     "h": 59
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "32px",
+     "h": 61
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "32px",
+     "h": 61
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "27.52px",
+     "h": 52
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "32px",
+     "h": 61
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "35.2px",
+     "h": 33
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7614,
+   "smallTargets": [],
+   "console": []
+  },
+  "360x640": {
+   "load": {
+    "cls": 0,
+    "lcp": 56,
+    "lcpEl": "SPAN.hero__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0.0001,
+    "shifts": [
+     {
+      "v": 0,
+      "t": 5467,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5617,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5767,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 1,
+     "rt": 0,
+     "fs": "77.4px",
+     "h": 67
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "36px",
+     "h": 68
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "36px",
+     "h": 68
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 53
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "36px",
+     "h": 68
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "39.6px",
+     "h": 38
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7921,
+   "smallTargets": [],
+   "console": []
+  },
+  "390x844": {
+   "load": {
+    "cls": 0,
+    "lcp": 60,
+    "lcpEl": "SPAN.hero__glyph",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": [
+     {
+      "v": 0,
+      "t": 5211,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5343,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5626,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 2,
+     "rt": 0,
+     "fs": "83.85px",
+     "h": 72
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 55
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "42.204px",
+     "h": 40
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 9083,
+   "smallTargets": [],
+   "console": []
+  },
+  "768x1024": {
+   "load": {
+    "cls": 0.0029,
+    "lcp": 60,
+    "lcpEl": "SPAN.hero__glyph",
+    "shifts": [
+     {
+      "v": 0.0029,
+      "t": 74,
+      "src": [
+       "hero__cell",
+       "hero__cell",
+       "hero__cell"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.003,
+    "shifts": [
+     {
+      "v": 0.0029,
+      "t": 74,
+      "src": [
+       "hero__cell",
+       "hero__cell",
+       "hero__cell"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5500,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5717,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5983,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 2,
+     "rt": 0,
+     "fs": "184.32px",
+     "h": 159
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "59.2896px",
+     "h": 113
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "59.2896px",
+     "h": 113
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 1,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 35
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "59.2896px",
+     "h": 113
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "59.2896px",
+     "h": 56
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 10458,
+   "smallTargets": [],
+   "console": []
+  },
+  "1024x768": {
+   "load": {
+    "cls": 0.0038,
+    "lcp": 64,
+    "lcpEl": "SPAN.hero__glyph",
+    "shifts": [
+     {
+      "v": 0.0038,
+      "t": 77,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0039,
+    "shifts": [
+     {
+      "v": 0.0038,
+      "t": 77,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5530,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5747,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5981,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 2,
+     "rt": 0,
+     "fs": "129.024px",
+     "h": 111
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "53.248px",
+     "h": 101
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "70.208px",
+     "h": 133
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "47.104px",
+     "h": 90
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 1,
+     "rt": 0,
+     "fs": "70.208px",
+     "h": 67
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "70.208px",
+     "h": 67
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7869,
+   "smallTargets": [],
+   "console": []
+  },
+  "1280x800": {
+   "load": {
+    "cls": 0.0037,
+    "lcp": 80,
+    "lcpEl": "SPAN.hero__glyph",
+    "shifts": [
+     {
+      "v": 0.0037,
+      "t": 86,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0038,
+    "shifts": [
+     {
+      "v": 0.0037,
+      "t": 86,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5550,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5783,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 6033,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 2,
+     "rt": 0,
+     "fs": "161.28px",
+     "h": 139
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "66.56px",
+     "h": 126
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "80.96px",
+     "h": 154
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "58.88px",
+     "h": 112
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 1,
+     "rt": 0,
+     "fs": "80.96px",
+     "h": 77
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "56.32px",
+     "h": 53
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 8017,
+   "smallTargets": [],
+   "console": []
+  },
+  "1440x900": {
+   "load": {
+    "cls": 0.0035,
+    "lcp": 64,
+    "lcpEl": "SPAN.hero__glyph",
+    "shifts": [
+     {
+      "v": 0.0035,
+      "t": 75,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0035,
+    "shifts": [
+     {
+      "v": 0.0035,
+      "t": 75,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5546,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5779,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5996,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 2,
+     "rt": 0,
+     "fs": "181.44px",
+     "h": 156
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "74.88px",
+     "h": 142
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "87.68px",
+     "h": 167
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "66.24px",
+     "h": 126
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 1,
+     "rt": 0,
+     "fs": "87.68px",
+     "h": 83
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "63.36px",
+     "h": 60
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 8834,
+   "smallTargets": [],
+   "console": []
+  },
+  "1920x1080": {
+   "load": {
+    "cls": 0.0028,
+    "lcp": 64,
+    "lcpEl": "SPAN.hero__glyph",
+    "shifts": [
+     {
+      "v": 0.0028,
+      "t": 71,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0028,
+    "shifts": [
+     {
+      "v": 0.0028,
+      "t": 71,
+      "src": [
+       "hero__word",
+       "hero__hello statement",
+       "hero__cell"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5561,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5794,
+      "src": [
+       "seq__railbox"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 6027,
+      "src": [
+       "seq__railbox"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 0,
+     "fs": "241.92px",
+     "h": 208
+    },
+    {
+     "tag": "H2",
+     "text": "ONE MORNING, ONE CRÊPE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "89.25px",
+     "h": 170
+    },
+    {
+     "tag": "H2",
+     "text": "SWEET, SAVORY, FOLDED HOT",
+     "lines": 2,
+     "rt": 0,
+     "fs": "102px",
+     "h": 194
+    },
+    {
+     "tag": "H2",
+     "text": "MADE IN FRONT OF YOU",
+     "lines": 2,
+     "rt": 0,
+     "fs": "80.75px",
+     "h": 153
+    },
+    {
+     "tag": "H2",
+     "text": "COME FIND THE GRIDDLE",
+     "lines": 1,
+     "rt": 0,
+     "fs": "102px",
+     "h": 97
+    },
+    {
+     "tag": "H2",
+     "text": "@unamattina",
+     "lines": 1,
+     "rt": 0,
+     "fs": "84.48px",
+     "h": 80
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 10106,
+   "smallTargets": [],
+   "console": []
+  }
+ },
+ "home": {
+  "320x568": {
+   "load": {
+    "cls": 0,
+    "lcp": 72,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "37.4026px",
+     "h": 66
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 3,
+     "rt": 2,
+     "fs": "25.7143px",
+     "h": 47
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "22px",
+     "h": 48
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATIONS LIVE STATIONS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "LUXURY PICNICS LUXURY PICNICS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 4,
+     "rt": 2,
+     "fs": "40px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "34.2857px",
+     "h": 63
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28px",
+     "h": 68
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7978,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 96x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16",
+    "P,TO 19104 (opens in a new tab 67x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16",
+    "Alisa Anton (opens in a new ta 74x16",
+    "CC0 (opens in a new tab) 26x16",
+    "P,TO 19104 (opens in a new tab 67x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16"
+   ],
+   "console": []
+  },
+  "360x640": {
+   "load": {
+    "cls": 0,
+    "lcp": 72,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.5974px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 4,
+     "rt": 2,
+     "fs": "29.2857px",
+     "h": 54
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "22.11px",
+     "h": 49
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATIONS LIVE STATIONS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40.848px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "LUXURY PICNICS LUXURY PICNICS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40.848px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 4,
+     "rt": 2,
+     "fs": "40.848px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "39.0476px",
+     "h": 72
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28.8px",
+     "h": 70
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7961,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 96x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16",
+    "P,TO 19104 (opens in a new tab 68x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16",
+    "Alisa Anton (opens in a new ta 74x16",
+    "CC0 (opens in a new tab) 26x16",
+    "P,TO 19104 (opens in a new tab 68x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16"
+   ],
+   "console": []
+  },
+  "390x844": {
+   "load": {
+    "cls": 0,
+    "lcp": 76,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "46.4935px",
+     "h": 82
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 3,
+     "rt": 2,
+     "fs": "31.9643px",
+     "h": 59
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "22.434px",
+     "h": 49
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATIONS LIVE STATIONS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H2",
+     "text": "LUXURY PICNICS LUXURY PICNICS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 3,
+     "rt": 0,
+     "fs": "31.2px",
+     "h": 75
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 8254,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 97x16",
+    "CC BY-SA 4.0 (opens in a new t 85x16",
+    "P,TO 19104 (opens in a new tab 68x16",
+    "CC BY-SA 4.0 (opens in a new t 85x16",
+    "Alisa Anton (opens in a new ta 74x16",
+    "CC0 (opens in a new tab) 27x16",
+    "P,TO 19104 (opens in a new tab 68x16",
+    "CC BY-SA 4.0 (opens in a new t 85x16"
+   ],
+   "console": []
+  },
+  "768x1024": {
+   "load": {
+    "cls": 0.0022,
+    "lcp": 76,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0022,
+      "t": 82,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0022,
+    "shifts": [
+     {
+      "v": 0.0022,
+      "t": 82,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "91.7614px",
+     "h": 162
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 1,
+     "rt": 0,
+     "fs": "27.8016px",
+     "h": 31
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATIONS LIVE STATIONS",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "LUXURY PICNICS LUXURY PICNICS",
+     "lines": 4,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 4,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 4,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 4,
+     "rt": 0,
+     "fs": "41.856px",
+     "h": 98
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 8831,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 101x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "P,TO 19104 (opens in a new tab 71x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "P,TO 19104 (opens in a new tab 71x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1024x768": {
+   "load": {
+    "cls": 0.0116,
+    "lcp": 84,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0116,
+      "t": 90,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0116,
+    "shifts": [
+     {
+      "v": 0.0116,
+      "t": 90,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "122.597px",
+     "h": 216
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 3,
+     "rt": 2,
+     "fs": "46.4997px",
+     "h": 86
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.988px",
+     "h": 68
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "70.208px",
+     "h": 129
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "70.208px",
+     "h": 129
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 3,
+     "rt": 2,
+     "fs": "70.208px",
+     "h": 129
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "70.208px",
+     "h": 129
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 3,
+     "rt": 0,
+     "fs": "51.662px",
+     "h": 119
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7110,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1280x800": {
+   "load": {
+    "cls": 0.0095,
+    "lcp": 80,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0095,
+      "t": 87,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0095,
+    "shifts": [
+     {
+      "v": 0.0095,
+      "t": 87,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 4,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.1657px",
+     "h": 109
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "34.06px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "80.96px",
+     "h": 149
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "80.96px",
+     "h": 149
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 3,
+     "rt": 2,
+     "fs": "80.96px",
+     "h": 149
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "80.96px",
+     "h": 149
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 4,
+     "rt": 0,
+     "fs": "61.39px",
+     "h": 139
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7267,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1440x900": {
+   "load": {
+    "cls": 0.0076,
+    "lcp": 72,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0076,
+      "t": 87,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0076,
+    "shifts": [
+     {
+      "v": 0.0076,
+      "t": 87,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 4,
+     "rt": 2,
+     "fs": "67.0829px",
+     "h": 123
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "35.98px",
+     "h": 79
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 7796,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1920x1080": {
+   "load": {
+    "cls": 0.0039,
+    "lcp": 84,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0039,
+      "t": 90,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0039,
+    "shifts": [
+     {
+      "v": 0.0039,
+      "t": 90,
+      "src": [
+       "phx__title phx__tuck",
+       "voice phx__voice phx__tuck"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNED, STYLED, SERVED PLANNED, STYLED, SERVED",
+     "lines": 3,
+     "rt": 2,
+     "fs": "65.8329px",
+     "h": 121
+    },
+    {
+     "tag": "H3",
+     "text": "Example: a backyard 40th, 50 guests",
+     "lines": 2,
+     "rt": 0,
+     "fs": "35.98px",
+     "h": 79
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 4,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 4,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "BLOOM CART BLOOM CART",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "AT HOME OR ON THE BEACH AT HOME OR ON THE BEACH",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H2",
+     "text": "TELL US ABOUT YOUR DAY",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 8870,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16",
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "P,TO 19104 (opens in a new tab 72x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  }
+ }
+}

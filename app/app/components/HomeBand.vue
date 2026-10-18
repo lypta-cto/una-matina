@@ -54,7 +54,7 @@ const fallback = computed(() => img(props.photo.src, { width: Math.min(1600, pro
 /* the parallax layer is taller than the frame by --px at both ends, so no edge ever shows */
 .hband__px { position: absolute; left: 0; right: 0; top: calc(var(--px) * -100%); bottom: calc(var(--px) * -100%); transform: translate3d(0, var(--py, 0px), 0); }
 .hband__px picture { display: block; height: 100%; }
-.hband__img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos-m); display: block; }
+.hband__img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos-m); display: block; filter: saturate(1.15); } /* keeps the dusk warm under the tint */
 @media (min-width: 768px) { .hband__img { object-position: var(--pos); } }
 .hband__over { position: absolute; inset: auto 0 0 0; z-index: 1; padding-bottom: clamp(22px, 3.4vw, 56px); }
 .hband__cap {

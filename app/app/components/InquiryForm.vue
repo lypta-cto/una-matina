@@ -132,9 +132,11 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
 <template>
   <div class="inq">
     <div class="inq__main">
-      <div v-if="state === 'sent'" ref="sentEl" class="sent m-follow" role="status" tabindex="-1">
-        <p class="statement">Thank you, {{ firstName }}.</p>
-        <p class="sent__body">We'll write to <span class="sent__email">{{ form.email.trim() }}</span><template v-if="contact.replyTime.confirmed"> {{ contact.replyTime.value }}</template> with a few questions about your day.</p>
+      <!-- the payoff: heavy words rising out of their masks, and the morning sun coming up behind the panel's edge -->
+      <div v-if="state === 'sent'" ref="sentEl" class="sent" role="status" tabindex="-1">
+        <RiseText class="sent__t" as="p" :lines="['Thank you,', `${firstName}.`]" size="l" by="word" trigger="load" />
+        <p class="sent__body m-in" style="--m-d: 420ms">We'll write to <span class="sent__email">{{ form.email.trim() }}</span><template v-if="contact.replyTime.confirmed"> {{ contact.replyTime.value }}</template> with a few questions about your day.</p>
+        <span class="sent__sun" aria-hidden="true" />
       </div>
 
       <form v-else class="f" novalidate @submit.prevent="submit">
@@ -212,7 +214,7 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
 
         <div class="f__group">
           <label for="f-msg" class="f__legend">Anything else we should know?</label>
-          <textarea id="f-msg" v-model="form.message" rows="5" class="f__input f__area" :maxlength="MAX.message" :aria-describedby="form.message.length > MAX.message - 500 ? 'f-msg-count' : undefined" placeholder="The occasion, the feel you're after, colours, anything you've already booked." />
+          <textarea id="f-msg" v-model="form.message" rows="5" class="f__input f__area" :maxlength="MAX.message" :aria-describedby="form.message.length > MAX.message - 500 ? 'f-msg-count' : undefined" placeholder="The occasion, the feel you're after, colors, anything you've already booked." />
           <p v-if="form.message.length > MAX.message - 500" id="f-msg-count" class="f__count tnum">{{ form.message.length }} of {{ MAX.message }} characters</p>
         </div>
 
@@ -227,7 +229,7 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
           <div class="f__submit">
             <button ref="submitBtn" type="submit" class="pill pill--sun pill--on-light f__send" :aria-disabled="state === 'sending' ? 'true' : undefined">{{ state === 'sending' ? 'Sending…' : 'Send inquiry' }} <span v-if="state !== 'sending'" class="pill__arrow" aria-hidden="true">→</span></button>
             <p v-if="state === 'error'" class="f__err f__fail" role="alert">
-              {{ failure === 'timeout' ? 'This is taking too long, so we stopped trying. Your answers are still here: check your connection and send again' : 'Something went wrong on our side. Your answers are still here: send again in a moment' }}<template v-if="contact.email.confirmed">, or write to <a :href="`mailto:${contact.email.value}`" class="link">{{ contact.email.value }}</a></template>.
+              {{ failure === 'timeout' ? 'This is taking too long, so we stopped trying. Your answers are still here: check your connection and send again' : 'Something went wrong on our side. Your answers are still here: send again in a moment' }}<template v-if="contact.email.confirmed">, or write to <a :href="`mailto:${contact.email.value}`" class="link">{{ contact.email.value }}</a></template><template v-else>, or come and say hello <NuxtLink to="/crepes" class="link">at the market</NuxtLink></template>.
             </p>
           </div>
         </div>
@@ -240,7 +242,7 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
         <div class="inq__live">
           <div class="inq__head">
             <h2 id="inq-sum-title" class="inq__title">{{ state === 'sent' ? 'What you sent us' : 'Your event so far' }}</h2>
-            <p class="inq__n">{{ countText }}</p>
+            <p v-if="state !== 'sent'" class="inq__n">{{ countText }}</p>
           </div>
           <InqSummary :rows="rows" />
         </div>
@@ -359,8 +361,18 @@ const firstName = computed(() => form.name.trim().split(/\s+/)[0])
 .f__end { display: grid; gap: 16px; }
 .f__submit { display: grid; gap: 12px; justify-items: start; }
 @media (max-width: 599px) { .f__send { width: 100%; } }
-.sent .statement { font-size: var(--step-3); line-height: 1.15; overflow-wrap: anywhere; }
-.sent { background: var(--surface); padding: clamp(24px, 4vw, 56px); display: grid; gap: 12px; min-width: 0; }
+.sent {
+  position: relative; overflow: clip; background: var(--surface); display: grid; gap: var(--space-tight); align-content: start; min-width: 0;
+  min-height: clamp(320px, 42svh, 460px); padding: clamp(28px, 4vw, 56px) clamp(24px, 4vw, 56px) clamp(96px, 12vw, 150px);
+}
+.sent__body { position: relative; z-index: 1; }
+/* the sun comes up from the panel's lower edge once the words have landed */
+.sent__sun {
+  position: absolute; right: clamp(24px, 4vw, 56px); bottom: 0; width: clamp(120px, 16vw, 220px); aspect-ratio: 2 / 1;
+  border-radius: 999px 999px 0 0; background: var(--accent); animation: sent-sun 1300ms var(--ease-out) 520ms both;
+}
+@keyframes sent-sun { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) { .sent__sun { animation: none; } }
 .sent:focus { outline: none; }
 .sent:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 .sent__body { font-size: var(--step-1); line-height: 1.45; max-width: 44ch; }

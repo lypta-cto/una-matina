@@ -56,3 +56,8 @@ How to find them:
 `pages/crepes.vue` had "Menu and prices to be confirmed." in an earlier version; the current file no longer renders it
 (rendered-HTML grep of /crepes for "confirm|placeholder|TBC|Concept image|Styled shoot|000-0000" is clean). /crepes
 already hid its Tbc chips in `layouts/crepes.vue`; with the new Tbc those rules simply match nothing.
+
+## Concept images to swap after the styled shoot (Events v2)
+- `app/public/img/svc/crepes-plate*.webp`, `crepes-folds*.webp` — crops of Luka's AI crêpe image (Services "Stations" frame, Live Stations crêpe row, Home stations room via `/img/crepes/seq-source-3344.webp`)
+- `app/public/img/svc/booth*.webp` — crop of the AI market-booth mockup (Services "Planning" frame)
+- Live Stations `LsSignPanel` panels for tiramisu, fruit cups, charcuterie, cocktail/mocktail bar — replace with real station photos

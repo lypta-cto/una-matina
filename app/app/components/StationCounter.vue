@@ -59,7 +59,7 @@ const to = computed(() => ({ path: '/inquire', query: { services: 'stations', st
             <p class="sc__name">{{ slot.s.name }}</p>
             <p class="sc__note italic-line"><Tbc note="station description">{{ slot.s.note }}</Tbc></p>
           </template>
-          <p v-else class="sc__add">Add a station</p>
+          <p v-else class="sc__add"><span aria-hidden="true">+ add</span><span class="sr-only">An empty place</span></p>
         </div>
       </TransitionGroup>
       <div class="sc__foot">
@@ -97,7 +97,7 @@ const to = computed(() => ({ path: '/inquire', query: { services: 'stations', st
 .sc__board { background: var(--field-dark); color: var(--on-field-dark); }
 .sc__top { position: relative; display: grid; gap: 10px; padding: 18px clamp(16px, 2.4vw, 28px) 0; }
 .sc__sign { background: var(--ground); color: var(--ink); padding: 18px 20px 20px; display: grid; gap: 6px; align-content: start; min-height: 120px; transform-origin: 50% 0; }
-.sc__sign.is-empty { background: transparent; color: var(--on-field-dark); align-content: center; justify-items: center; outline: 2px solid var(--accent); outline-offset: -2px; }
+.sc__sign.is-empty { background: transparent; color: var(--on-field-dark); align-content: center; justify-items: center; border: 3px dashed color-mix(in srgb, var(--on-field-dark) 40%, transparent); }
 .sc__name { font-weight: 700; font-size: var(--step-1); line-height: 1.1; letter-spacing: -0.01em; }
 .sc__note { font-size: 1rem; line-height: 1.4; }
 .sc__add { font-weight: 600; font-size: 1rem; }

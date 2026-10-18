@@ -1,12 +1,11 @@
 <script setup lang="ts">
-// Bloom Cart signature (events-v2-system.md §8): a pinned camera sequence through the flower-market photo, in three
-// stops: the whole stall → one wrapped bucket → stems at hand, beside "We pick the flowers / The cart is set / Guests
-// tie a bouquet". The /crepes technique (CrpSequence.vue) on the shared usePinProgress: one image layer laid out at
+// Bloom Cart signature (events-v2-system.md §8): a pinned camera sequence through the flower-market photo (the hero's
+// picture), in three close stops beside "Stems in season / Wrapped by the bunch / Picked by hand". The /crepes technique (CrpSequence.vue) on the shared usePinProgress: one image layer laid out at
 // its largest size and only scaled down; the camera holds 40 % of each segment and travels on an ease-in-out, zoom
 // interpolated in log space. Source 1600 × 1066, zoom ≤ 1.9, frame ≤ 672 px tall, so ≤ 1.2 CSS px per source px.
 // The step titles are the index (heavy caps; active full ink with the sage half-sun, others muted; click = jump),
 // "Two of three" + a rail follow progress, the step sentence rises through a mask. After the last stop the end line
-// rises ("Décor, an activity and a favour, from one cart.") and the frame eases back 3 % as the section releases.
+// rises ("Décor, an activity and a favor, from one cart.") and the frame eases back 3 % as the section releases.
 // SSR / no JS / reduced motion / screens < 520 px tall: a static list, one 4:5 still per step (CSS crops of the
 // same file, so it is one download).
 import { credits } from '~/data/credits'
@@ -16,15 +15,19 @@ const IH = 1066
 const ZMAX = 1.9
 const SRC = '/img/world/flower-market-buckets.jpg'
 
-// crops [x, y, w, h] in source px, each 4:5; the camera frames each one (z = 1 is the full height)
+// crops [x, y, w, h] in source px, each 4:5; the camera frames each one (z = 1 is the full height). The hero above
+// shows the whole stall, so the camera starts already in: the hellebores and white tulips (z 1.5) → the paper-wrapped tulips
+// (z 1.9, framed above the wraps' printed vendor name) → the hyacinth stems (z 1.9). The words describe what is in
+// the frame (a found market photo, not our cart); what we do stays in the sentence. Luka's own cart photos replace
+// these stops when they exist.
 const steps = [
-  { title: 'We pick the flowers', text: 'Stems chosen to match your palette and the season.', crop: [334, 0, 853, 1066], alt: 'The whole flower stall: buckets of tulips, white daisies, hellebores and hyacinths under price boards' },
-  { title: 'The cart is set', text: 'Wrap, ribbon and mini vases, with signage for your event.', crop: [466, 337, 449, 561], alt: 'Close on one bucket of pink tulips wrapped in white paper' },
-  { title: 'Guests tie a bouquet', text: 'They choose their stems, tie them and take them home.', crop: [816, 505, 449, 561], alt: 'Close on bunches of hyacinth stems in cellophane, ready to be picked up' },
+  { title: 'Stems in season', text: 'We match the flowers to your palette and the time of year.', crop: [860, 120, 568, 710], alt: 'Pale green hellebores, white tulips and daisies on a flower stall' },
+  { title: 'Wrapped by the bunch', text: "Paper, ribbon and mini vases on the cart, with signage in your event's name.", crop: [440, 30, 449, 561], alt: 'Bunches of pink tulips standing in white paper wraps' },
+  { title: 'Picked by hand', text: 'Guests choose their stems, tie a small bouquet and take it home.', crop: [816, 505, 449, 561], alt: 'Bunches of hyacinth stems in cellophane, standing in a bucket' },
 ] as const
 const N = steps.length
 const words = ['One', 'Two', 'Three']
-const ending = 'Décor, an activity and a favour, from one cart.'
+const ending = 'Décor, an activity and a favor, from one cart.'
 
 // Run (svh of scroll): 2 × 70 for the camera, 40 for the end line, 30 for the release.
 const RUN_STEPS = 140
@@ -136,7 +139,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', onResize))
     <div v-else ref="stage" class="bcs__stage">
       <div class="wrap bcs__grid">
         <div ref="frame" class="bcs__frame">
-          <img ref="layer" class="bcs__layer" :src="layerSrc" decoding="async" alt="A flower-market stall: buckets of tulips wrapped in paper, hellebores and hyacinth stems">
+          <img ref="layer" class="bcs__layer" :src="layerSrc" decoding="async" alt="Close views of a flower-market stall: white tulips and hellebores, pink tulips in paper wraps, hyacinth stems">
         </div>
         <div class="bcs__copy">
           <div class="bcs__head"><RiseText id="bouquet-title" :lines="['From bucket', 'to bouquet']" size="l" /></div>

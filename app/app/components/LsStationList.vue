@@ -5,18 +5,20 @@
 // 70 ms per row. Rows lean 6 px on hover (fine pointer).
 // ≥ 900 px: a sticky 4:5 frame on the right follows the row in the reading band: the incoming picture wipes up over
 // the outgoing one (clip-path, 700 ms) while it settles 1.06 → 1; under it the station's name and "Three of six".
-// Found photos only where one honestly exists (griddle, cannoli); the others are signboard panels with the station's
-// name (ShootSlot). Phones / no JS: no frame, the griddle photo under the board. Reduced motion: final, instant swaps.
+// Pictures only where one is honest: the crêpe station shows Luka's AI crêpe concept (folded crêpes, the /crepes
+// image), the cannoli bar the found cannoli photo; the other four are signboards (LsSignPanel: the name and the note
+// set like a menu card over the rising half-sun) until the shoot. Phones / no JS: no frame, the crêpe concept under
+// the board. Reduced motion: final, instant swaps.
 // The notes are unconfirmed wording: wrapped in <Tbc> (invisible marker).
 import { stations } from '~/data/stations'
 import { credits } from '~/data/credits'
 
-const photos: Record<string, { photo: typeof credits.griddle, alt: string }> = {
-  crepe: { photo: credits.griddle, alt: 'A thin crêpe cooking on a round cast-iron griddle' },
+const photos: Record<string, { photo: typeof credits.cannoli, alt: string }> = {
   cannoli: { photo: credits.cannoli, alt: 'A tray of Sicilian cannoli filled with ricotta, finished with pistachio and candied cherry' },
 }
-const tones = ['apricot', 'yellow', 'brown'] as const
-const rise = (i: number) => 0.3 + (0.7 * i) / (stations.length - 1)
+const crepe = { src: '/img/svc/crepes-folds-4x5-880.webp', w: 880, h: 1100, alt: 'Illustration: folded crêpes with berries, whipped cream and a drizzle of syrup' }
+const tones = ['apricot', 'yellow', 'brown', 'deep'] as const
+const rise = (i: number) => 0.3 + (0.3 * i) / (stations.length - 1)
 const words = ['One', 'Two', 'Three', 'Four', 'Five', 'Six']
 const longest = Math.max(...stations.map(s => s.name.length))
 
@@ -49,12 +51,13 @@ onBeforeUnmount(() => io?.disconnect())
         <span v-if="i === stations.length - 1" class="lsl__rule lsl__rule--end st-draw" aria-hidden="true" />
       </li>
     </ul>
-    <FoundPhoto class="lsl__lead-photo" unveil sizes="sm:100vw md:440px" :photo="credits.griddle" ratio="4 / 5" :alt="photos.crepe!.alt" />
+    <ConceptImage class="lsl__lead-photo" unveil sizes="sm:100vw md:440px" :src="crepe.src" :width="crepe.w" :height="crepe.h" ratio="4 / 5" :alt="crepe.alt" />
     <div ref="aside" class="lsl__aside">
       <div class="lsl__frame">
         <div v-for="(s, i) in stations" :key="s.id" class="lsl__layer" :class="{ 'is-on': i === active }" :inert="i !== active">
-          <FoundPhoto v-if="photos[s.id]" sizes="sm:100vw lp:440px" :photo="photos[s.id]!.photo" ratio="4 / 5" :alt="photos[s.id]!.alt" />
-          <ShootSlot v-else :tone="tones[i % 3]" :label="s.sign || s.short" :subject="s.name.toLowerCase()" ratio="4 / 5" :rise="rise(i)" />
+          <ConceptImage v-if="s.id === 'crepe'" sizes="sm:100vw lp:460px" :src="crepe.src" :width="crepe.w" :height="crepe.h" ratio="4 / 5" :alt="crepe.alt" />
+          <FoundPhoto v-else-if="photos[s.id]" sizes="sm:100vw lp:460px" :photo="photos[s.id]!.photo" ratio="4 / 5" :alt="photos[s.id]!.alt" />
+          <LsSignPanel v-else :tone="tones[i % 4]" :name="s.name" :note="s.note" :rise="rise(i)" />
         </div>
       </div>
       <p class="lsl__cap" aria-hidden="true">
@@ -117,19 +120,21 @@ onBeforeUnmount(() => io?.disconnect())
   /* the swap: the incoming layer wipes up over the outgoing one, which stays put underneath until it is covered */
   .lsl__layer { grid-area: 1 / 1; z-index: 0; clip-path: inset(100% 0 0 0); visibility: hidden; transition: clip-path 0s linear 720ms, visibility 0s linear 720ms; }
   .lsl__layer.is-on { z-index: 1; clip-path: inset(0); visibility: visible; transition: clip-path 700ms var(--ease-out), visibility 0s; }
-  .lsl__layer :deep(.found__img), .lsl__layer :deep(.slot) { transform: scale(1.06); transition: transform 0s linear 720ms; }
-  .lsl__layer.is-on :deep(.found__img), .lsl__layer.is-on :deep(.slot) { transform: none; transition: transform 1100ms var(--ease-out); }
-  .lsl__layer :deep(.found__frame), .lsl__layer :deep(.slot) { overflow: hidden; }
+  .lsl__layer :deep(:is(.found__img, .concept__img, .lsp__words, .lsp__sun)) { scale: 1.06; transition: scale 0s linear 720ms; }
+  .lsl__layer.is-on :deep(:is(.found__img, .concept__img, .lsp__words, .lsp__sun)) { scale: 1; transition: scale 1100ms var(--ease-out); }
+  .lsl__layer :deep(.lsp__words) { transform-origin: 0 0; }
+  /* the outgoing photo's credit leaves at once (it must never show under the incoming panel) */
+  .lsl__layer:not(.is-on) :deep(.found__cap) { visibility: hidden; transition: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .lsl__layer, .lsl__layer.is-on, .lsl__name::before, .lsl__lean { transition: none !important; }
-  .lsl__layer :deep(.found__img), .lsl__layer :deep(.slot) { transition: none !important; transform: none !important; }
+  .lsl__layer :deep(:is(.found__img, .concept__img, .lsp__words, .lsp__sun)) { transition: none !important; scale: 1 !important; }
   .lsl-cap-enter-active, .lsl-cap-leave-active { transition: none; }
 }
 </style>
 
 <style>
-/* Without JS the frame cannot follow the board: no sticky frame, the griddle photo under the board instead. */
+/* Without JS the frame cannot follow the board: no sticky frame, the crêpe concept under the board instead. */
 @media (min-width: 900px) {
   html:not(.js) .lsl__aside { display: none; }
   html:not(.js) .lsl__lead-photo { display: block; }

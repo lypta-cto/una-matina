@@ -1,0 +1,227 @@
+{
+ "how-we-work-320x568": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 3",
+   "H2 \"Start withstep one\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 13,
+  "H": 5954
+ },
+ "how-we-work-360x640": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 4",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 3",
+   "H2 \"Start withstep one\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 6424
+ },
+ "how-we-work-390x844": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 4",
+   "H2 \"Running it, not serving itRunning it,not\" 3",
+   "H2 \"Start withstep one\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 8204
+ },
+ "how-we-work-768x1024": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 4",
+   "H2 \"Start withstep one\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 10,
+  "H": 8183
+ },
+ "how-we-work-1024x768": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 4",
+   "H2 \"Start withstep one\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 7665
+ },
+ "how-we-work-1280x800": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 3",
+   "H2 \"Start withstep one\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 7648
+ },
+ "how-we-work-1440x900": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 3",
+   "H2 \"Start withstep one\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 11,
+  "H": 7832
+ },
+ "how-we-work-1920x1080": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"Simple for youSimplefor you\" 3",
+   "H2 \"From inquiry to follow-upFrom inquiryto \" 3",
+   "H2 \"Running it, not serving itRunning it,not\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 9,
+  "H": 8015
+ },
+ "about-320x568": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 3",
+   "H2 \"One mark, two morningsOne mark,two morni\" 4",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3",
+   "H2 \"Tell usabout your day\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 12,
+  "H": 5534
+ },
+ "about-360x640": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 3",
+   "H2 \"One mark, two morningsOne mark,two morni\" 3",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3",
+   "H2 \"Who we areWho we are\" 3",
+   "H2 \"Tell usabout your day\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 10,
+  "H": 5529
+ },
+ "about-390x844": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 4",
+   "H2 \"One mark, two morningsOne mark,two morni\" 3",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3",
+   "H2 \"Who we areWho we are\" 3",
+   "H2 \"Tell usabout your day\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 8,
+  "H": 5546
+ },
+ "about-768x1024": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 3",
+   "H2 \"One mark, two morningsOne mark,two morni\" 3",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 4",
+   "H2 \"Tell usabout your day\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 7,
+  "H": 5532
+ },
+ "about-1024x768": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 4",
+   "H2 \"One mark, two morningsOne mark,two morni\" 3",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3",
+   "H2 \"Tell usabout your day\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 7,
+  "H": 4503
+ },
+ "about-1280x800": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 3",
+   "H2 \"One mark, two morningsOne mark,two morni\" 4",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3",
+   "H2 \"Who we areWho we are\" 3",
+   "H2 \"Tell usabout your day\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 8,
+  "H": 4975
+ },
+ "about-1440x900": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 4",
+   "H2 \"One mark, two morningsOne mark,two morni\" 4",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 7,
+  "H": 5256
+ },
+ "about-1920x1080": {
+  "overflowX": 0,
+  "wide": [],
+  "heads": [
+   "H1 \"It started with a crêpeIt startedwith a \" 3",
+   "H2 \"One mark, two morningsOne mark,two morni\" 4",
+   "H2 \"Mornings, Gulf lightMornings,Gulf light\" 3",
+   "H2 \"Tell usabout your day\" 4"
+  ],
+  "ph": [],
+  "cons": [],
+  "frames": 7,
+  "H": 5694
+ }
+}

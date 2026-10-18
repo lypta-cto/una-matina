@@ -3,7 +3,7 @@
  *
  * Lenis is on only for a mouse / trackpad ((hover: hover) and (pointer: fine)) and never under prefers-reduced-motion;
  * touch keeps native momentum. It drives the real window scroll, so everything else stays native: position: sticky,
- * IntersectionObserver reveals (plugins/reveal.ts), scroll listeners (header headroom, StationRotator, /crepes bar),
+ * IntersectionObserver reveals (plugins/reveal.ts), scroll listeners (header headroom, the Home rooms, /crepes bar),
  * CSS scroll-driven animations (About suns), focus scrolling and keyboard scrolling (Space / PageDown / arrows are not
  * intercepted; Lenis just re-syncs from the native scroll event).
  *

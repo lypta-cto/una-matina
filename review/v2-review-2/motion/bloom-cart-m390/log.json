@@ -1,0 +1,18 @@
+{
+ "loadFrames": 35,
+ "loadMetrics": {
+  "cls": 0,
+  "lcp": 148,
+  "lcpEl": "rt__line",
+  "shifts": []
+ },
+ "perf": {
+  "n": 674,
+  "p50": 16.7,
+  "p95": 16.7,
+  "over34": 0,
+  "cls": 0,
+  "shifts": []
+ },
+ "cons": []
+}

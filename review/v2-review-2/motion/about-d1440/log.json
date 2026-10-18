@@ -1,0 +1,30 @@
+{
+ "loadFrames": 67,
+ "loadMetrics": {
+  "cls": 0.0014,
+  "lcp": 72,
+  "lcpEl": "rt__line",
+  "shifts": [
+   {
+    "v": 0.0014,
+    "t": 54,
+    "src": "#text | rt__word | rt__mask | rt__mask | rt__word"
+   }
+  ]
+ },
+ "perf": {
+  "n": 564,
+  "p50": 16.7,
+  "p95": 16.7,
+  "over34": 0,
+  "cls": 0.0014,
+  "shifts": [
+   {
+    "v": 0.0014,
+    "t": 54,
+    "src": "#text | rt__word | rt__mask | rt__mask | rt__word"
+   }
+  ]
+ },
+ "cons": []
+}

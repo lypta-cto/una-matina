@@ -1,0 +1,2640 @@
+{
+ "services": {
+  "320x568": {
+   "load": {
+    "cls": 0,
+    "lcp": 84,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 3,
+     "rt": 2,
+     "fs": "34.2857px",
+     "h": 60
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 3,
+     "rt": 2,
+     "fs": "34.2857px",
+     "h": 63
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "28px",
+     "h": 28
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "27.4286px",
+     "h": 50
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17px",
+     "h": 22
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 4,
+     "rt": 2,
+     "fs": "34.2857px",
+     "h": 63
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28px",
+     "h": 68
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 6683,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 74x16",
+    "CC0 (opens in a new tab) 26x16",
+    "DanielPenfield (opens in a new 96x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16"
+   ],
+   "console": []
+  },
+  "360x640": {
+   "load": {
+    "cls": 0,
+    "lcp": 60,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 4,
+     "rt": 2,
+     "fs": "39.0476px",
+     "h": 69
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 3,
+     "rt": 2,
+     "fs": "39.0476px",
+     "h": 72
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.085px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.085px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 28
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 4,
+     "rt": 2,
+     "fs": "31.2381px",
+     "h": 57
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.085px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.085px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.085px",
+     "h": 22
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 3,
+     "rt": 2,
+     "fs": "39.0476px",
+     "h": 72
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28.8px",
+     "h": 70
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 6647,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 74x16",
+    "CC0 (opens in a new tab) 26x16",
+    "DanielPenfield (opens in a new 96x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16"
+   ],
+   "console": []
+  },
+  "390x844": {
+   "load": {
+    "cls": 0,
+    "lcp": 52,
+    "lcpEl": "SPAN.rt__c",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 4,
+     "rt": 2,
+     "fs": "42.619px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.1488px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.1488px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 4,
+     "rt": 2,
+     "fs": "34.0952px",
+     "h": 63
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.1488px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.1488px",
+     "h": 22
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.1488px",
+     "h": 22
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 3,
+     "rt": 0,
+     "fs": "31.2px",
+     "h": 75
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 6690,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 74x16",
+    "CC0 (opens in a new tab) 27x16",
+    "DanielPenfield (opens in a new 97x16",
+    "CC BY-SA 4.0 (opens in a new t 85x16"
+   ],
+   "console": []
+  },
+  "768x1024": {
+   "load": {
+    "cls": 0.0019,
+    "lcp": 64,
+    "lcpEl": "SPAN.rt__c",
+    "shifts": [
+     {
+      "v": 0.0019,
+      "t": 70,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0019,
+    "shifts": [
+     {
+      "v": 0.0019,
+      "t": 70,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 4,
+     "rt": 2,
+     "fs": "84.1146px",
+     "h": 148
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.952px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.952px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.952px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.952px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "17.952px",
+     "h": 23
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40.1525px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 4,
+     "rt": 0,
+     "fs": "41.856px",
+     "h": 98
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5001,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "DanielPenfield (opens in a new 101x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1024x768": {
+   "load": {
+    "cls": 0.0045,
+    "lcp": 56,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0045,
+      "t": 68,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0045,
+    "shifts": [
+     {
+      "v": 0.0045,
+      "t": 68,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 3,
+     "rt": 2,
+     "fs": "112.379px",
+     "h": 198
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 4,
+     "rt": 2,
+     "fs": "70.208px",
+     "h": 129
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "42.58px",
+     "h": 43
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "64.5045px",
+     "h": 119
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 4,
+     "rt": 2,
+     "fs": "37.8776px",
+     "h": 70
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 4,
+     "rt": 0,
+     "fs": "51.662px",
+     "h": 119
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5308,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1280x800": {
+   "load": {
+    "cls": 0.0058,
+    "lcp": 88,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0058,
+      "t": 89,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0058,
+    "shifts": [
+     {
+      "v": 0.0058,
+      "t": 89,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 3,
+     "rt": 2,
+     "fs": "142.855px",
+     "h": 251
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 3,
+     "rt": 2,
+     "fs": "80.96px",
+     "h": 149
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "47.7px",
+     "h": 48
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 4,
+     "rt": 2,
+     "fs": "80.96px",
+     "h": 149
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 3,
+     "rt": 2,
+     "fs": "48.2385px",
+     "h": 89
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 4,
+     "rt": 0,
+     "fs": "61.39px",
+     "h": 139
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5534,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1440x900": {
+   "load": {
+    "cls": 0.0049,
+    "lcp": 68,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0049,
+      "t": 70,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0049,
+    "shifts": [
+     {
+      "v": 0.0049,
+      "t": 70,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "50.9px",
+     "h": 51
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "85.7143px",
+     "h": 158
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 3,
+     "rt": 2,
+     "fs": "54.7154px",
+     "h": 101
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5862,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1920x1080": {
+   "load": {
+    "cls": 0.0023,
+    "lcp": 56,
+    "lcpEl": "SPAN.rt__c",
+    "shifts": [
+     {
+      "v": 0.0023,
+      "t": 67,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0023,
+    "shifts": [
+     {
+      "v": 0.0023,
+      "t": 67,
+      "src": [
+       "#text",
+       "rt__word",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "THREE PARTS, ONE TEAM THREE PARTS, ONE TEAM",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "PLANNING & COORDINATION PLANNING & COORDINATION",
+     "lines": 4,
+     "rt": 2,
+     "fs": "87.68px",
+     "h": 161
+    },
+    {
+     "tag": "H3",
+     "text": "Planning",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Production",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "WHO WE BRING IN",
+     "lines": 1,
+     "rt": 0,
+     "fs": "50.9px",
+     "h": 51
+    },
+    {
+     "tag": "H2",
+     "text": "DESIGN, FLORALS & SETUP DESIGN, FLORALS & SETUP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "85.7143px",
+     "h": 158
+    },
+    {
+     "tag": "H3",
+     "text": "Florals, in-house",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Design",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H3",
+     "text": "Setup & breakdown",
+     "lines": 1,
+     "rt": 0,
+     "fs": "18.0625px",
+     "h": 23
+    },
+    {
+     "tag": "H2",
+     "text": "LIVE STATION CATERING LIVE STATION CATERING",
+     "lines": 3,
+     "rt": 2,
+     "fs": "53.6905px",
+     "h": 99
+    },
+    {
+     "tag": "H2",
+     "text": "START WITH ONE PART",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 6166,
+   "smallTargets": [
+    "Alisa Anton (opens in a new ta 78x16",
+    "CC0 (opens in a new tab) 28x16",
+    "DanielPenfield (opens in a new 102x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  }
+ },
+ "live-stations": {
+  "320x568": {
+   "load": {
+    "cls": 0,
+    "lcp": 72,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "29.3878px",
+     "h": 52
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 3,
+     "rt": 2,
+     "fs": "31.6484px",
+     "h": 58
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 1,
+     "rt": 0,
+     "fs": "28px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28px",
+     "h": 56
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "31.6484px",
+     "h": 58
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28px",
+     "h": 68
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5384,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 96x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16"
+   ],
+   "console": []
+  },
+  "360x640": {
+   "load": {
+    "cls": 0,
+    "lcp": 60,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "33.4694px",
+     "h": 59
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 4,
+     "rt": 2,
+     "fs": "36.044px",
+     "h": 66
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 1,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 28
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 56
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "36.044px",
+     "h": 66
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28.8px",
+     "h": 70
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5345,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 96x16",
+    "CC BY-SA 4.0 (opens in a new t 84x16"
+   ],
+   "console": []
+  },
+  "390x844": {
+   "load": {
+    "cls": 0,
+    "lcp": 72,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "36.5306px",
+     "h": 64
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 3,
+     "rt": 2,
+     "fs": "39.3407px",
+     "h": 72
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 58
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "39.3407px",
+     "h": 72
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 2,
+     "rt": 0,
+     "fs": "31.2px",
+     "h": 75
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5435,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 97x16",
+    "CC BY-SA 4.0 (opens in a new t 85x16"
+   ],
+   "console": []
+  },
+  "768x1024": {
+   "load": {
+    "cls": 0.0037,
+    "lcp": 68,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0037,
+      "t": 69,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0037,
+    "shifts": [
+     {
+      "v": 0.0037,
+      "t": 69,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "72.0982px",
+     "h": 127
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 4,
+     "rt": 0,
+     "fs": "41.856px",
+     "h": 98
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 5194,
+   "smallTargets": [
+    "DanielPenfield (opens in a new 101x16",
+    "CC BY-SA 4.0 (opens in a new t 89x16"
+   ],
+   "console": []
+  },
+  "1024x768": {
+   "load": {
+    "cls": 0.009,
+    "lcp": 64,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.009,
+      "t": 67,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0091,
+    "shifts": [
+     {
+      "v": 0.009,
+      "t": 67,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4551,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4615,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4665,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4714,
+      "src": [
+       "lsl__count"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "96.3265px",
+     "h": 170
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 3,
+     "rt": 2,
+     "fs": "57.2304px",
+     "h": 105
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.9998px",
+     "h": 31
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.9998px",
+     "h": 31
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.9998px",
+     "h": 31
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.9998px",
+     "h": 31
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.9998px",
+     "h": 31
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "30.9998px",
+     "h": 31
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "70.208px",
+     "h": 129
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 4,
+     "rt": 0,
+     "fs": "51.662px",
+     "h": 119
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 4343,
+   "smallTargets": [],
+   "console": []
+  },
+  "1280x800": {
+   "load": {
+    "cls": 0.0114,
+    "lcp": 64,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0114,
+      "t": 66,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0114,
+    "shifts": [
+     {
+      "v": 0.0114,
+      "t": 66,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4614,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4649,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4715,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4799,
+      "src": [
+       "lsl__count"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "122.449px",
+     "h": 216
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 4,
+     "rt": 2,
+     "fs": "72.8194px",
+     "h": 134
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39.4438px",
+     "h": 39
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39.4438px",
+     "h": 39
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39.4438px",
+     "h": 39
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39.4438px",
+     "h": 39
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39.4438px",
+     "h": 39
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "39.4438px",
+     "h": 39
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "52.0141px",
+     "h": 96
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 3,
+     "rt": 0,
+     "fs": "61.39px",
+     "h": 139
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 4262,
+   "smallTargets": [],
+   "console": []
+  },
+  "1440x900": {
+   "load": {
+    "cls": 0.0117,
+    "lcp": 216,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0117,
+      "t": 277,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0117,
+    "shifts": [
+     {
+      "v": 0.0117,
+      "t": 277,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5427,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5477,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5527,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 5593,
+      "src": [
+       "lsl__count"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 4,
+     "rt": 2,
+     "fs": "138.776px",
+     "h": 244
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 3,
+     "rt": 2,
+     "fs": "82.5635px",
+     "h": 152
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "44.7219px",
+     "h": 45
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "44.7219px",
+     "h": 45
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "44.7219px",
+     "h": 45
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "44.7219px",
+     "h": 45
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "44.7219px",
+     "h": 45
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "44.7219px",
+     "h": 45
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 3,
+     "rt": 2,
+     "fs": "58.9732px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 4533,
+   "smallTargets": [],
+   "console": []
+  },
+  "1920x1080": {
+   "load": {
+    "cls": 0.0055,
+    "lcp": 64,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0055,
+      "t": 72,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0055,
+    "shifts": [
+     {
+      "v": 0.0055,
+      "t": 72,
+      "src": [
+       "#text",
+       "#text",
+       "rt__word"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4805,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4870,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4905,
+      "src": [
+       "lsl__count"
+      ]
+     },
+     {
+      "v": 0,
+      "t": 4954,
+      "src": [
+       "lsl__count"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "138.776px",
+     "h": 244
+    },
+    {
+     "tag": "H2",
+     "text": "SIX STATIONS, ALL MADE LIVE SIX STATIONS, ALL MADE",
+     "lines": 3,
+     "rt": 2,
+     "fs": "81.0251px",
+     "h": 149
+    },
+    {
+     "tag": "H3",
+     "text": "CRÊPE STATION",
+     "lines": 2,
+     "rt": 0,
+     "fs": "43.8886px",
+     "h": 44
+    },
+    {
+     "tag": "H3",
+     "text": "TIRAMISU BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "43.8886px",
+     "h": 44
+    },
+    {
+     "tag": "H3",
+     "text": "FRUIT CUP BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "43.8886px",
+     "h": 44
+    },
+    {
+     "tag": "H3",
+     "text": "CHARCUTERIE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "43.8886px",
+     "h": 44
+    },
+    {
+     "tag": "H3",
+     "text": "CANNOLI BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "43.8886px",
+     "h": 44
+    },
+    {
+     "tag": "H3",
+     "text": "COCKTAIL & MOCKTAIL BAR",
+     "lines": 2,
+     "rt": 0,
+     "fs": "43.8886px",
+     "h": 44
+    },
+    {
+     "tag": "H2",
+     "text": "ONE COUNTER, MANY STATIONS ONE COUNTER, MANY STATI",
+     "lines": 4,
+     "rt": 2,
+     "fs": "57.8743px",
+     "h": 106
+    },
+    {
+     "tag": "H2",
+     "text": "PICK YOUR STATIONS",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 4864,
+   "smallTargets": [],
+   "console": []
+  }
+ },
+ "luxury-picnics": {
+  "320x568": {
+   "load": {
+    "cls": 0,
+    "lcp": 60,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "37.4026px",
+     "h": 66
+    },
+    {
+     "tag": "H2",
+     "text": "WHAT IT CAN INCLUDE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "26.88px",
+     "h": 54
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40px",
+     "h": 74
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 4,
+     "rt": 2,
+     "fs": "31.6484px",
+     "h": 58
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28px",
+     "h": 68
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3646,
+   "smallTargets": [],
+   "console": []
+  },
+  "360x640": {
+   "load": {
+    "cls": 0,
+    "lcp": 84,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 4,
+     "rt": 2,
+     "fs": "42.5974px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "WHAT IT CAN INCLUDE",
+     "lines": 2,
+     "rt": 0,
+     "fs": "28.14px",
+     "h": 56
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "40.848px",
+     "h": 75
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 3,
+     "rt": 2,
+     "fs": "36.044px",
+     "h": 66
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 3,
+     "rt": 0,
+     "fs": "28.8px",
+     "h": 70
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3707,
+   "smallTargets": [],
+   "console": []
+  },
+  "390x844": {
+   "load": {
+    "cls": 0,
+    "lcp": 60,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": []
+   },
+   "end": {
+    "cls": 0,
+    "shifts": []
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "46.4935px",
+     "h": 82
+    },
+    {
+     "tag": "H2",
+     "text": "WHAT IT CAN INCLUDE",
+     "lines": 1,
+     "rt": 0,
+     "fs": "28.782px",
+     "h": 29
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "42.204px",
+     "h": 78
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 3,
+     "rt": 2,
+     "fs": "39.3407px",
+     "h": 72
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 3,
+     "rt": 0,
+     "fs": "31.2px",
+     "h": 75
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3894,
+   "smallTargets": [],
+   "console": []
+  },
+  "768x1024": {
+   "load": {
+    "cls": 0.0013,
+    "lcp": 64,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0013,
+      "t": 69,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0013,
+    "shifts": [
+     {
+      "v": 0.0013,
+      "t": 69,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "91.7614px",
+     "h": 162
+    },
+    {
+     "tag": "H2",
+     "text": "WHAT IT CAN INCLUDE",
+     "lines": 1,
+     "rt": 0,
+     "fs": "37.3248px",
+     "h": 37
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 4,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 4,
+     "rt": 2,
+     "fs": "59.2896px",
+     "h": 109
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 4,
+     "rt": 0,
+     "fs": "41.856px",
+     "h": 98
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 4157,
+   "smallTargets": [],
+   "console": []
+  },
+  "1024x768": {
+   "load": {
+    "cls": 0.0032,
+    "lcp": 60,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0032,
+      "t": 64,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0032,
+    "shifts": [
+     {
+      "v": 0.0032,
+      "t": 64,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "122.597px",
+     "h": 216
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 1,
+     "rt": 0,
+     "fs": "24.844px",
+     "h": 30
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "60.3896px",
+     "h": 111
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 3,
+     "rt": 2,
+     "fs": "49.0556px",
+     "h": 90
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 4,
+     "rt": 0,
+     "fs": "51.662px",
+     "h": 119
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3125,
+   "smallTargets": [],
+   "console": []
+  },
+  "1280x800": {
+   "load": {
+    "cls": 0.0038,
+    "lcp": 64,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0038,
+      "t": 64,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0038,
+    "shifts": [
+     {
+      "v": 0.0038,
+      "t": 64,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 1,
+     "rt": 0,
+     "fs": "25.5px",
+     "h": 31
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 4,
+     "rt": 2,
+     "fs": "76.839px",
+     "h": 141
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 4,
+     "rt": 2,
+     "fs": "62.4176px",
+     "h": 115
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 3,
+     "rt": 0,
+     "fs": "61.39px",
+     "h": 139
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3279,
+   "smallTargets": [],
+   "console": []
+  },
+  "1440x900": {
+   "load": {
+    "cls": 0.0029,
+    "lcp": 84,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0029,
+      "t": 72,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0029,
+    "shifts": [
+     {
+      "v": 0.0029,
+      "t": 72,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 1,
+     "rt": 0,
+     "fs": "25.5px",
+     "h": 31
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "87.1195px",
+     "h": 160
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 3,
+     "rt": 2,
+     "fs": "70.7692px",
+     "h": 130
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3546,
+   "smallTargets": [],
+   "console": []
+  },
+  "1920x1080": {
+   "load": {
+    "cls": 0.0014,
+    "lcp": 60,
+    "lcpEl": "SPAN.rt__line",
+    "shifts": [
+     {
+      "v": 0.0014,
+      "t": 67,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "end": {
+    "cls": 0.0014,
+    "shifts": [
+     {
+      "v": 0.0014,
+      "t": 67,
+      "src": [
+       "#text",
+       "rt__mask",
+       "rt__mask"
+      ]
+     }
+    ]
+   },
+   "overflowX": 0,
+   "wide": [],
+   "heads": [
+    {
+     "tag": "H1",
+     "text": "",
+     "lines": 3,
+     "rt": 2,
+     "fs": "148.75px",
+     "h": 262
+    },
+    {
+     "tag": "H2",
+     "text": "",
+     "lines": 1,
+     "rt": 0,
+     "fs": "25.5px",
+     "h": 31
+    },
+    {
+     "tag": "H2",
+     "text": "WHERE WE SET UP WHERE WE SET UP",
+     "lines": 3,
+     "rt": 2,
+     "fs": "85.4961px",
+     "h": 157
+    },
+    {
+     "tag": "H2",
+     "text": "PUBLIC PLACES HAVE RULES PUBLIC PLACES HAVE RULES",
+     "lines": 3,
+     "rt": 2,
+     "fs": "69.4505px",
+     "h": 128
+    },
+    {
+     "tag": "H2",
+     "text": "PICK A SPOT AND A DATE",
+     "lines": 4,
+     "rt": 0,
+     "fs": "67.47px",
+     "h": 152
+    }
+   ],
+   "spill": [],
+   "placeholders": [],
+   "height": 3989,
+   "smallTargets": [],
+   "console": []
+  }
+ }
+}

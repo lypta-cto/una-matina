@@ -65,6 +65,7 @@ const imgStyle = computed(() => ({ '--pos': props.position, '--pos-m': props.pos
 // Curtain (section-library A2, /crepes): one rAF per scroll event, transform/opacity only. Off under reduced motion.
 const heroEl = ref<HTMLElement | null>(null)
 const sheetEl = ref<HTMLElement | null>(null)
+const { $lenis } = useNuxtApp()
 onMounted(() => {
   const hero = heroEl.value
   const sheet = sheetEl.value
@@ -83,15 +84,38 @@ onMounted(() => {
     const p = Math.min(1, Math.max(0, (vh - top) / vh))
     if (body) body.style.transform = p ? `translate3d(0, ${(-12 * p).toFixed(2)}vh, 0)` : ''
     const entering = top < vh - 1
-    for (const el of tucks) el.classList.toggle('is-tucked', entering && el.getBoundingClientRect().bottom > top - 24)
+    const act = document.activeElement
+    // a block holding focus is never stepped aside (keyboard focus would fall to <body>)
+    for (const el of tucks) el.classList.toggle('is-tucked', !el.contains(act) && entering && el.getBoundingClientRect().bottom > top - 24)
     if (pic) pic.style.transform = p ? `scale(${(1 + 0.06 * p).toFixed(4)})` : ''
   }
   const onScroll = () => { if (!tick) tick = requestAnimationFrame(frame) }
   const onResize = () => { place(); onScroll() }
+  // Keyboard focus inside the hero: bring it back to a fully visible state (the sheet not yet over it) with the focused
+  // element in view. Natural positions come from offsetTop (transform-free, sticky-free); keyboard focus only, so a
+  // click on a visible link never jumps the page.
+  const onFocus = (e: FocusEvent) => {
+    const el = e.target as HTMLElement
+    if (!el?.matches?.(':focus-visible')) return
+    const vh = window.innerHeight
+    let y = 0
+    for (let n: HTMLElement | null = el; n && n !== hero; n = n.offsetParent as HTMLElement | null) y += n.offsetTop
+    const wrapTop = (hero.parentElement?.getBoundingClientRect().top ?? 0) + window.scrollY
+    const elTop = wrapTop + y, elBottom = elTop + el.offsetHeight
+    const maxY = wrapTop + hero.offsetHeight - vh // the last scroll position before the sheet enters
+    const covered = sheet.getBoundingClientRect().top < vh - 1
+    const out = elTop < window.scrollY || elBottom > window.scrollY + vh
+    if (!covered && !out) return
+    const target = Math.max(0, Math.min(maxY, elBottom - vh + 24))
+    if ($lenis) $lenis.scrollTo(target, { immediate: true, force: true })
+    else window.scrollTo({ top: target, behavior: 'instant' as ScrollBehavior })
+    frame()
+  }
   frame()
+  hero.addEventListener('focusin', onFocus)
   window.addEventListener('scroll', onScroll, { passive: true })
   window.addEventListener('resize', onResize, { passive: true })
-  onBeforeUnmount(() => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize); cancelAnimationFrame(tick) })
+  onBeforeUnmount(() => { hero.removeEventListener('focusin', onFocus); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize); cancelAnimationFrame(tick) })
 })
 </script>
 
@@ -192,8 +216,12 @@ onMounted(() => {
 @media (prefers-reduced-motion: reduce) { .phx__vline { animation: none; } }
 /* Curtain: the hero holds (sticky, top set in JS) while the sheet slides over; blocks step aside before it reaches them. */
 .phx.is-curtain { position: sticky; z-index: 0; }
-.phx__tuck { transition: opacity 240ms var(--ease-out), visibility 0s linear 0s; }
-.phx .is-tucked { opacity: 0 !important; visibility: hidden; transition: opacity 240ms var(--ease-out), visibility 0s linear 240ms; }
+/* tucked = transparent and click-through, but still focusable (no visibility: hidden): Shift+Tab back from the sheet
+   must reach the hero's links; the focus guard then brings the hero back and the focused block never tucks */
+.phx__tuck { transition: opacity 240ms var(--ease-out); }
+.phx .is-tucked { opacity: 0 !important; pointer-events: none; }
+/* the text inside fades with it, so nothing reads as 'visible text under the sheet' (focus is unaffected) */
+.phx .is-tucked * { opacity: 0 !important; transition: opacity 240ms var(--ease-out) !important; }
 .phx__sheet { position: relative; z-index: 1; background: var(--ground); }
 
 /* ── heavy: on the page field ── */
@@ -233,6 +261,10 @@ onMounted(() => {
   padding-top: clamp(20px, 6svh, 56px);
 }
 .phx--photo .phx__actions { margin-top: 22px; }
+/* photo heroes: air between the voice and the title's letter cells (their boxes would overlap the voice's line box), and
+   (≥ 900) between the title and the board's scalloped edge, which otherwise starts right under the second line */
+.phx--photo .phx__title { margin-top: 0.9rem; }
+@media (min-width: 900px) { .phx--photo .phx__title { margin-bottom: clamp(18px, 3.4svh, 36px); } }
 .phx--photo .phx__lead { background: var(--field-dark); margin: 0 calc(-1 * var(--gutter)); padding: 20px var(--gutter) 4px; max-width: none; font-size: 1.0625rem; line-height: 1.5; }
 @media (max-width: 899px) {
   .phx--photo .phx__board { margin: 0 calc(-1 * var(--gutter)); }

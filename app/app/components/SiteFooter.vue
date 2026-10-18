@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const route = useRoute()
 import { contact, eventsNav } from '~/data/site'
 import { credits, heroVideo } from '~/data/credits'
 // one credit per source picture (two crops of the same photograph share one line)
@@ -14,7 +15,7 @@ const year = new Date().getFullYear()
       <div class="foot__top">
         <div class="foot__lead">
           <p class="signoff foot__sign">Good Food, Brighter Days</p>
-          <NuxtLink to="/inquire" class="pill pill--sun foot__cta">Start an inquiry <span class="pill__arrow" aria-hidden="true">→</span></NuxtLink>
+          <NuxtLink v-if="route.path !== '/inquire'" to="/inquire" class="pill pill--sun foot__cta">Start an inquiry <span class="pill__arrow" aria-hidden="true">→</span></NuxtLink>
         </div>
         <div class="foot__grid">
           <div>

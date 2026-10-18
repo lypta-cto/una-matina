@@ -247,3 +247,6 @@ html.lenis, html.lenis body { height: auto; }
     scroll-behavior: auto !important;
   }
 }
+
+/* very narrow phones: pills stack full width so labels never touch the rounded ends */
+@media (max-width: 379px) { .pills > .pill { flex: 1 1 100%; } }
