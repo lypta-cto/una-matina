@@ -663,3 +663,8 @@ Artifacts: `review/v2/v2-hai/` (full pages per width, motion sheets, form states
 
 ## Crêpes-only mode (2026-11-08)
 `site.config.ts` → `crepesOnly: true`: global route middleware `app/middleware/crepes-only.global.ts` redirects every URL except `/crepes` (known pages, unknown paths, client-side links) to `/crepes` with a 302 (temporary, so nothing caches it for when the events site opens). Assets, `/api/*`, `robots.txt`, `sitemap.xml` untouched; the sitemap lists `/crepes` only; the "We also do events" link on /crepes is hidden. Verified on dev and a production build. To open the Events site: set `crepesOnly: false`.
+
+## Vercel (2026-11-08)
+- Vercel project `una-matina` (una-matina.vercel.app) — deploys from GitHub `main`. Root Directory must be `app`.
+- Vercel Web Analytics: `@vercel/analytics` + module `@vercel/analytics/nuxt` in nuxt.config (cookieless; reports only on Vercel).
+- @nuxt/image on Vercel uses the Vercel image service (allowed widths = `image.screens`); added `qhd: 1920`, `uhd: 2560` so full-bleed photos stay sharp on large screens. Build checked locally with `VERCEL=1 NITRO_PRESET=vercel`.

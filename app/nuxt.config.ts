@@ -17,6 +17,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    // Vercel Web Analytics (cookieless page views); only reports on Vercel deployments
+    '@vercel/analytics/nuxt',
     ...(i18n ? ['@nuxtjs/i18n'] : []),
   ],
   ...(i18n ? { i18n } : {}),
@@ -50,5 +52,5 @@ export default defineNuxtConfig({
     defaults: { weights: [400], styles: ['normal'] },
   },
 
-  image: { quality: 80, format: ['avif', 'webp'], screens: { xs: 320, sm: 640, md: 768, lp: 900, lg: 1024, xl: 1280, xxl: 1536 } },
+  image: { quality: 80, format: ['avif', 'webp'], screens: { xs: 320, sm: 640, md: 768, lp: 900, lg: 1024, xl: 1280, xxl: 1536, qhd: 1920, uhd: 2560 } },
 })
