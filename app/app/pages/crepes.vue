@@ -9,6 +9,7 @@ import type { Directive } from 'vue'
 import { menu } from '~/data/menu'
 import { markets, mapsUrl } from '~/data/markets'
 import { contact } from '~/data/site'
+import site from '~~/site.config'
 
 definePageMeta({ layout: 'crepes' })
 usePageSeo({
@@ -191,7 +192,7 @@ onMounted(() => {
               <a v-if="igUrl" :href="igUrl" class="link" target="_blank" rel="noopener">Instagram <Tbc note="Instagram handle">{{ contact.instagram.handle }}</Tbc><span class="sr-only"> (opens in a new tab)</span></a>
               <p v-else>Instagram <Tbc note="Instagram handle">{{ contact.instagram.handle }}</Tbc></p>
             </div>
-            <div>
+            <div v-if="!site.crepesOnly">
               <p class="foot__h">We also do events</p>
               <p class="foot__p">A live crêpe station, picnics and whole private celebrations at your home or on the beach.</p>
               <NuxtLink to="/" class="link">Una Mattina Events &amp; Catering</NuxtLink>

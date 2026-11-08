@@ -6,6 +6,9 @@ export default {
   description: 'Una Mattina Events & Catering: planning, design with in-house florals and live food stations for private celebrations in Naples and Southwest Florida.',
   ogImage: '/og.png',
   skipLabel: 'Skip to content',
+  // Only the crêpe stand page is public for now: every other URL redirects (302) to /crepes, the events links on
+  // /crepes are hidden and the sitemap lists /crepes only. Set to false to open the Events & Catering site.
+  crepesOnly: true,
   fonts: [
     // variable Montserrat: one face covering 400–700, so 500 / 600 / 700 are real weights, never synthesised
     { name: 'Montserrat', provider: 'google', weights: ['400 700'], styles: ['normal'], preload: true },

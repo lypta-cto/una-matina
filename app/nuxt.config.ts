@@ -25,6 +25,8 @@ export default defineNuxtConfig({
   vite: { plugins: [tailwindcss()] },
 
   site: { url: site.url, name: site.name, defaultLocale: site.lang },
+  // While only /crepes is public (site.config crepesOnly), the sitemap lists just that page.
+  ...(site.crepesOnly ? { sitemap: { excludeAppSources: true, urls: ['/crepes'] } } : {}),
 
   app: {
     head: {

@@ -660,3 +660,6 @@ Artifacts: `review/v2/v2-hai/` (full pages per width, motion sheets, form states
 - "Made in front of you" on phones: the pinned frame (and the static list's stills) run full width, edge to edge.
 - Dev server moved to http://localhost:3417 (3001 is now taken by another project).
 - Pop-up follow-up: `CrpConeMark` takes a `sun` colour (default cream for the apricot finale card); the pop-up and its launcher use apricot, so the sun shows on cream. After × / Esc a round cream launcher with the cone stays in the same corner (while the hero is on screen, also after reload); click/Enter reopens the card. Focus moves × → launcher → × for keyboard users.
+
+## Crêpes-only mode (2026-11-08)
+`site.config.ts` → `crepesOnly: true`: global route middleware `app/middleware/crepes-only.global.ts` redirects every URL except `/crepes` (known pages, unknown paths, client-side links) to `/crepes` with a 302 (temporary, so nothing caches it for when the events site opens). Assets, `/api/*`, `robots.txt`, `sitemap.xml` untouched; the sitemap lists `/crepes` only; the "We also do events" link on /crepes is hidden. Verified on dev and a production build. To open the Events site: set `crepesOnly: false`.
