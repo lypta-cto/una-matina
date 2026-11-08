@@ -246,6 +246,11 @@ onBeforeUnmount(() => {
 .seq__lt { font-weight: 700; font-size: var(--step-2); line-height: 1.15; letter-spacing: -0.01em; }
 .seq__ll { margin-top: 6px; font-size: 1.0625rem; line-height: 1.45; max-width: 34ch; }
 
+/* Phones: the picture runs edge to edge (full width), filling its own row under the title. */
+@media (max-width: 599px) {
+  .seq__frame { width: calc(100% + 2 * var(--gutter)); max-width: none; margin-inline: calc(-1 * var(--gutter)); aspect-ratio: auto; height: 100%; max-height: min(560px, 100%); justify-self: stretch; }
+  .seq__item img, .seq__conecard { width: calc(100% + 2 * var(--gutter)); max-width: none; margin-inline: calc(-1 * var(--gutter)); }
+}
 @media (min-width: 600px) and (max-width: 899px) { .seq__frame { max-height: min(680px, 66svh); } }
 @media (min-width: 900px) {
   .seq__grid { grid-template-rows: none; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); align-content: center; align-items: center; gap: clamp(32px, 5vw, 96px); padding-block: 0; }
