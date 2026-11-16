@@ -28,7 +28,7 @@ export default defineNuxtConfig({
 
   site: { url: site.url, name: site.name, defaultLocale: site.lang },
   // While only /crepes is public (site.config crepesOnly), the sitemap lists just that page.
-  ...(site.crepesOnly ? { sitemap: { excludeAppSources: true, urls: ['/crepes'] } } : {}),
+  ...(site.crepesOnly ? { sitemap: { excludeAppSources: true, urls: ['/crepes', '/crepes/menu'] } } : {}),
 
   app: {
     head: {

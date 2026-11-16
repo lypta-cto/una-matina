@@ -16,7 +16,7 @@ Italic = Playfair Display Italic (whole sentences only).
 **Buttons:** See the menu · Follow on Instagram
 
 **Menu** — H2: The menu
-*Note:* Menu and prices to be confirmed. Ask us about allergens.
+*Note:* Menu and prices from the stand's printed menu (Una Mattina Menu.pdf, 2026-11-16) — source of truth is `app/app/data/menu.ts`. Full printed menu at /crepes/menu.
 Sweet
 - Nutella & Banana — *Warm Nutella, sliced banana, powdered sugar.* — 10
 - Strawberry Dream — *Fresh strawberries, whipped cream, chocolate drizzle.* — 10

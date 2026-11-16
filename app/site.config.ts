@@ -14,5 +14,8 @@ export default {
     { name: 'Montserrat', provider: 'google', weights: ['400 700'], styles: ['normal'], preload: true },
     { name: 'Playfair Display', provider: 'google', weights: [400], styles: ['italic'], preload: true },
     { name: 'Mrs Saint Delafield', provider: 'google', weights: [400], styles: ['normal'] },
+    // /crepes/menu only: the closest open faces to the printed menu (Canva's Montnapha → Gelasio, Monterchi → Marcellus)
+    { name: 'Gelasio', provider: 'google', weights: [700], styles: ['normal', 'italic'] },
+    { name: 'Marcellus', provider: 'google', weights: [400], styles: ['normal'] },
   ] as { name: string, provider?: string, weights?: (number | string)[], styles?: ('normal' | 'italic')[], preload?: boolean }[],
 }

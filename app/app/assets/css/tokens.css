@@ -68,6 +68,20 @@
   --stagger: 70ms;
   --ease-spring: linear(0, 0.013 0.6%, 0.05 1.2%, 0.2 2.6%, 0.443 4.3%, 0.926 7.8%, 1.053 9.5%, 1.12 11.3%, 1.137 13%, 1.124 14.9%, 1.034 20.6%, 1.002 24.2%, 0.989 28.6%, 0.999 38%, 1);
 
+  /* ── /crepes/menu: the printed menu sheet (Una Mattina Menu.pdf), colours sampled from the print ── */
+  --sheet: #FFFFFF;             /* the print is on white */
+  --sheet-ink: #5B3A2E;         /* brown, as everywhere */
+  --sheet-cone: #52230A;        /* the cone's stroke */
+  --sheet-sun: #FFB191;         /* the print's lighter apricot in the cone */
+  --sheet-rule: #F9E4A8;        /* the yellow brush rules after each heading */
+  --sheet-divider: #F4A878;     /* apricot column dividers */
+  --sheet-pill: #EDD7C1;        /* the label pills under Make your own */
+  --sheet-fine: #545454;        /* advisory and allergen notice (7.4:1 on white) */
+  --sheet-badge: #EEAD80;       /* the Raw food seal's rim */
+  --sheet-badge-in: #F4ECE2;
+  --font-sheet: "Gelasio", Georgia, serif;
+  --font-sheet-display: "Marcellus", "Optima", serif;
+
   /* ── Events v2 (events-v2-system.md), derived from /crepes. New names only: /crepes keeps its own values. ── */
   /* Heavy display: Montserrat 700, tight. Sizes are the ceiling; RiseText/PageHero fit each authored line to its column. */
   --display-xl: clamp(3rem, 1rem + 12vw, 8.75rem);

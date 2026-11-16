@@ -6,7 +6,7 @@
 // by v-inview (only for sections still below the fold at load, never under reduced motion, never
 // without JS), in the --ease-out family. Springs only where something physically turns (the sign).
 import type { Directive } from 'vue'
-import { menu } from '~/data/menu'
+import { makeYourOwn, menu } from '~/data/menu'
 import { markets, mapsUrl } from '~/data/markets'
 import { contact } from '~/data/site'
 import site from '~~/site.config'
@@ -41,7 +41,7 @@ const igCards = [
 ]
 
 const allItems = menu.flatMap(s => s.items)
-const featured = allItems.find(i => i.name === 'Pistachio Bliss') ?? allItems[0] ?? null
+const featured = allItems.find(i => i.name === 'Pistachio Dream') ?? allItems[0] ?? null
 
 /**
  * v-inview: arms a section that is below the fold at load (adds .crp-armed, which the CSS uses as the
@@ -135,12 +135,18 @@ onMounted(() => {
         <div class="menu__head">
           <h2 id="menu-title" class="sign-l menu__title">Sweet, savory, folded hot</h2>
           <div class="menu__side">
-            <p v-if="ranges.length" class="menu__prices"><Tbc note="prices follow the confirmed menu"><template v-for="(r, k) in ranges" :key="r.title"><span v-if="k" class="menu__dot" aria-hidden="true"> · </span>{{ r.title }} <CrpOdo :value="r.text" :delay="200 + k * 160" /></template></Tbc></p>
+            <p v-if="ranges.length" class="menu__prices"><template v-for="(r, k) in ranges" :key="r.title"><span v-if="k" class="menu__dot" aria-hidden="true"> · </span>{{ r.title }} <CrpOdo :value="r.text" :delay="200 + k * 160" /></template></p>
             <p class="menu__note">Prices in US dollars. Ask us about allergens, we are happy to help.</p>
           </div>
         </div>
         <div class="menu__cols">
           <MenuTable v-for="section in menu.filter(s => s.items.length)" :key="section.title" :title="section.title" :items="section.items" />
+          <!-- Make your own + the printed menu (the same page the stand's QR code opens) -->
+          <div class="menu__own">
+          <p class="menu__own-t"><span class="menu__own-n">Make your own</span> <span class="tnum">${{ makeYourOwn.price }}</span></p>
+          <p class="menu__own-d">Pick your spreads and toppings (+${{ makeYourOwn.groups[0]?.extra }} each) and finish with a sauce.</p>
+          <NuxtLink to="/crepes/menu" class="crp-btn crp-btn--ink menu__full">See the full menu <span class="crp-btn__arrow" aria-hidden="true">→</span></NuxtLink>
+          </div>
         </div>
       </div>
     </section>
@@ -245,9 +251,16 @@ onMounted(() => {
 @media (min-width: 1280px) { .menu__head { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } .menu__side { justify-items: end; text-align: right; } }
 .menu__prices { font-weight: 700; font-size: var(--step-1); line-height: 1.2; }
 .menu__note { max-width: 36ch; }
+.menu__own { display: grid; gap: 8px; justify-items: start; margin-top: -32px; padding-top: 22px; border-top: 1px solid var(--ink-deep); }
+.menu__own-t { display: flex; gap: 16px; justify-content: space-between; width: 100%; font-weight: 600; font-size: var(--step-1); line-height: 1.2; }
+.menu__own-d { max-width: 44ch; }
+.menu__full { margin-top: 18px; }
+@media (hover: hover) and (pointer: fine) { .menu__full:hover .crp-btn__arrow { transform: translateX(3px); } }
 .menu__cols { display: grid; gap: 88px clamp(36px, 5vw, 64px); }
 @media (min-width: 900px) {
-  .menu__cols { grid-template-columns: 1fr 1fr; align-items: start; }
+  .menu__cols { grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; align-items: start; row-gap: 0; }
+  .menu__cols > :first-child { grid-row: span 2; }
+  .menu__own { margin-top: 48px; }
 }
 /* Title: one rise, then MenuTable draws its rules (one move for the section). */
 .crp-armed .menu__title { opacity: 0; transform: translateY(20px); }

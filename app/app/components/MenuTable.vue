@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // One column of the crêpe menu as a real table: name and filling left, price right.
-// The menu's one authored move (driven by v-inview on the parent section, see pages/crepes.vue):
+// The menu's one authored move (driven by v-inview on the parent section, see pages/crepes/index.vue):
 // each row's rule draws left → right, then its words rise into place. Visible without JS / reduced motion.
 import type { Crepe } from '~/data/menu'
 defineProps<{ title: string, items: Crepe[] }>()

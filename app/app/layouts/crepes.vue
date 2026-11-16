@@ -51,6 +51,6 @@ html:has(.crepes) { scroll-padding-top: 0; }
 }
 .crp-btn:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
 
-/* Section choreography (v-inview in pages/crepes.vue): only sections below the fold are armed. */
+/* Section choreography (v-inview in pages/crepes/index.vue): only sections below the fold are armed. */
 @keyframes crp-rise { to { transform: none; opacity: 1; } }
 </style>

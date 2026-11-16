@@ -668,3 +668,12 @@ Artifacts: `review/v2/v2-hai/` (full pages per width, motion sheets, form states
 - Vercel project `una-matina` (una-matina.vercel.app) — deploys from GitHub `main`. Root Directory must be `app`.
 - Vercel Web Analytics: `@vercel/analytics` + module `@vercel/analytics/nuxt` in nuxt.config (cookieless; reports only on Vercel).
 - @nuxt/image on Vercel uses the Vercel image service (allowed widths = `image.screens`); added `qhd: 1920`, `uhd: 2560` so full-bleed photos stay sharp on large screens. Build checked locally with `VERCEL=1 NITRO_PRESET=vercel`.
+
+## /crepes/menu — printed menu as a page (2026-11-16)
+- Source: `Una Mattina Menu.pdf` (Canva, 768×1152 pt). Real menu now in `app/app/data/menu.ts` (10 sweet $13–15, 4 savory $14–16, Make your own $10 with spreads/toppings +$2, sauces, consumer + allergen notices). Typo fixed vs print: "Fanstasy" → "Fantasy"; S'more Love filling set in italic like the others.
+- `pages/crepes.vue` → `pages/crepes/index.vue` (needed for the child route); new `pages/crepes/menu.vue`.
+- ≥ 900 px: the printed sheet, every size = print points × `--u` (sheet 768 pt → max 1040 px), checked side by side with the PDF render. < 900 px: same type and colours re-flowed to one column (savory 2×2 at 600–899).
+- Fonts: Canva's Montnapha → Gelasio 700 (+ italic), Monterchi → Marcellus, Mont → Montserrat. Colours sampled from the print as `--sheet-*` tokens. Yellow brush rules, pills, apricot dividers and the Raw food seal are CSS/SVG (no Canva assets).
+- Redirect: `/crepes/*` already passes the crepesOnly middleware; sitemap lists `/crepes` and `/crepes/menu`.
+- /crepes menu section: real data, featured pop-up = Pistachio Dream $15, "Make your own" block + "See the full menu" → /crepes/menu; price Tbc markers removed (menu confirmed by the client's print).
+- QR: `qr/crepes-menu-qr.svg|png` → https://una-matina.vercel.app/crepes/menu (regenerate when the real domain is connected).

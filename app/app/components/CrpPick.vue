@@ -54,7 +54,7 @@ onBeforeUnmount(() => { io?.disconnect(); clearTimeout(timer); window.removeEven
       <aside v-if="show && props.featured" class="pick" aria-label="Featured crêpe">
         <CrpConeMark class="pick__mark" sun="var(--accent)" aria-hidden="true" />
         <div class="pick__body">
-          <p class="pick__name"><span>{{ props.featured.name }}</span><span class="pick__price tnum"><Tbc note="price">${{ props.featured.price }}</Tbc></span></p>
+          <p class="pick__name"><span>{{ props.featured.name }}</span><span class="pick__price tnum">${{ props.featured.price }}</span></p>
           <p class="pick__note">{{ props.featured.note }}</p>
           <a :href="props.menuHref" class="pick__link" @click="dismiss()">See the menu <span aria-hidden="true">↓</span></a>
         </div>

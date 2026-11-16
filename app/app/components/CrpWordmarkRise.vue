@@ -2,7 +2,7 @@
 // The footer wordmark, built from the traced logo paths, so it can rise letter by letter out of its
 // baseline and then let its sun come up. One <path> in <defs>, ten clipped <use> slices (the slices
 // tile the full width, so the resting state is the exact logo). Motion only when the parent section
-// is armed by v-inview (pages/crepes.vue); otherwise, with reduced motion or without JS, it is static.
+// is armed by v-inview (pages/crepes/index.vue); otherwise, with reduced motion or without JS, it is static.
 import raw from '~/assets/logo/wordmark-horizontal.svg?raw'
 
 const paths = [...raw.matchAll(/<path\b([^>]*)\/?>/g)].map(m => m[1] ?? '')

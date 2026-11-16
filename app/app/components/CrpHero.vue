@@ -84,7 +84,7 @@ useHead({
 @media (min-width: 1280px) { .hero__tint { --tint: 0.62; } }
 @media (min-width: 1680px) { .hero__tint { --tint: 0.64; } }
 @keyframes hero-settle { from { transform: scale(1.06); } to { transform: none; } }
-/* Curtain (pages/crepes.vue adds .is-curtain and the top offset): the hero holds while the intro slides over. */
+/* Curtain (pages/crepes/index.vue adds .is-curtain and the top offset): the hero holds while the intro slides over. */
 .hero.is-curtain { position: sticky; z-index: 0; }
 .hero :is(.hero__hello, .hero__word, .hero__lead, .hero__actions, .hero__side, .hero__feat, .hero__status, .hero__plank) { transition: opacity 240ms var(--ease-out), visibility 0s linear 0s; }
 .hero .is-tucked { opacity: 0 !important; visibility: hidden; transition: opacity 240ms var(--ease-out), visibility 0s linear 240ms; }
