@@ -1,7 +1,21 @@
 <script setup lang="ts">
 // Holding page while site.config `comingSoon` is on: app.vue renders only this, on every URL.
 
-useSeoMeta({ title: 'Coming soon', robots: 'noindex' })
+// Link previews (WhatsApp, iMessage, socials) show this page too, not the events site: own title, text and image.
+const desc = 'Una Mattina Events & Catering · Crêpes. Coming soon.'
+const ogImage = `${useRequestURL().origin}/og-soon.png`
+useSeoMeta({
+  title: 'Coming soon',
+  description: desc,
+  ogTitle: 'Una Mattina · Coming soon',
+  ogDescription: desc,
+  ogImage,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: 'Una Mattina: Coming soon',
+  twitterImage: ogImage,
+  robots: 'noindex',
+})
 useHead({ meta: [{ name: 'theme-color', content: '#FFF7EA' }] })
 </script>
 

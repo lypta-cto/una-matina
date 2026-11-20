@@ -680,3 +680,4 @@ Artifacts: `review/v2/v2-hai/` (full pages per width, motion sheets, form states
 
 ## Coming soon (2026-11-21)
 Owner (WhatsApp, Nov 20): take the crêpe site down and show only "Coming soon" — she uses a Linktree for the menu until the content is ready (first market on Tuesday). `site.config` `comingSoon: true`: app.vue renders only `ComingSoon.vue` (wordmark, "Coming soon", noindex), every URL incl. /crepes and /crepes/menu redirects 302 to /, sitemap lists /. All /crepes code stays; set `comingSoon: false` to bring it back. The printed QR to /crepes/menu now lands on Coming soon.
+Link previews: the Coming soon page has its own meta (title "Una Mattina · Coming soon", short description, absolute og:image `/og-soon.png` 1200×630 rendered from the page), so shared links no longer show the events hero/description.
