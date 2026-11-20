@@ -12,7 +12,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLayout>
+  <ComingSoon v-if="site.comingSoon" />
+  <NuxtLayout v-else>
     <NuxtPage />
   </NuxtLayout>
 </template>

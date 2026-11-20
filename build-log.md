@@ -677,3 +677,6 @@ Artifacts: `review/v2/v2-hai/` (full pages per width, motion sheets, form states
 - Redirect: `/crepes/*` already passes the crepesOnly middleware; sitemap lists `/crepes` and `/crepes/menu`.
 - /crepes menu section: real data, featured pop-up = Pistachio Dream $15, "Make your own" block + "See the full menu" → /crepes/menu; price Tbc markers removed (menu confirmed by the client's print).
 - QR: `qr/crepes-menu-qr.svg|png` → https://una-matina.vercel.app/crepes/menu (regenerate when the real domain is connected).
+
+## Coming soon (2026-11-21)
+Owner (WhatsApp, Nov 20): take the crêpe site down and show only "Coming soon" — she uses a Linktree for the menu until the content is ready (first market on Tuesday). `site.config` `comingSoon: true`: app.vue renders only `ComingSoon.vue` (wordmark, "Coming soon", noindex), every URL incl. /crepes and /crepes/menu redirects 302 to /, sitemap lists /. All /crepes code stays; set `comingSoon: false` to bring it back. The printed QR to /crepes/menu now lands on Coming soon.

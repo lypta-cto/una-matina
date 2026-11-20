@@ -9,6 +9,9 @@ export default {
   // Only the crêpe stand page is public for now: every other URL redirects (302) to /crepes, the events links on
   // /crepes are hidden and the sitemap lists /crepes only. Set to false to open the Events & Catering site.
   crepesOnly: true,
+  // Owner's request (Nov 2026): the whole domain shows only a "Coming soon" page; every URL redirects (302) to /.
+  // Takes precedence over crepesOnly. Set to false to bring /crepes (and /crepes/menu) back.
+  comingSoon: true,
   fonts: [
     // variable Montserrat: one face covering 400–700, so 500 / 600 / 700 are real weights, never synthesised
     { name: 'Montserrat', provider: 'google', weights: ['400 700'], styles: ['normal'], preload: true },
